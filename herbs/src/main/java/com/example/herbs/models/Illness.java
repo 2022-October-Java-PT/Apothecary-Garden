@@ -15,14 +15,13 @@ public class Illness {
 
     private String name;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "illnesses")
     private Collection<Herbs> herbs;
 
     public Illness () {}
 
-    public Illness(String name, Collection<Herbs> herbs) {
+    public Illness(String name) {
         this.name = name;
-        this.herbs = herbs;
     }
 
     public Long getId() {
