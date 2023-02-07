@@ -6,7 +6,7 @@ import style from './style.module.scss'
 class SearchBox extends Component {
     constructor() {
         super();
-        this.userInput = React.createContext();        
+        this.userInput = React.createRef();        
     }
 
     handleKeyUp = (event) => {

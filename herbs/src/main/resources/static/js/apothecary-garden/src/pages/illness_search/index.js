@@ -25,56 +25,48 @@ export default class IllnessSearch extends React.Component {
             let arrayOfHashes = response.data;
             arrayOfHashes.forEach((element) => {
                 array.push({
-                    name: element.data.name,
-                    link: element.data.science,
-                    description: element.data.description,
-                    fact: element.data.fact,
-                    picture: element.data.picture,
+                    name: element.data?.name,
+                    link: element.data?.science,
+                    description: element.data?.description,
+                    fact: element.data?.fact,
+                    picture: element.data?.picture,
+                    id: element.data?.id,
                     // sideEffects: element.data.sideEffects,
                 });
             });
+            console.log(arrayOfHashes);
             this.setState({
-                illnessData: array
+                illnessData: arrayOfHashes
             });
         });
     }
     
-      render() {
+    render() {
         let illnessData = this.state.illnessData;
-        illnessData = illnessData.map((hash,index) => {
-            // let name = this.state.name;
-            // let description = this.state.description;
-            // let fact = this.state.fact;
-            // // let sideEffects = this.state.sideEffects;
-            // let science = this.state.science;
-            // let picture = this.state.picture;
-            return (
-                <div>
-                    <Herb 
-                        name={hash.name}
-                        science={hash.science}
-                        description={hash.description}
-                        id={index}
-                        key={index}
-                    />
-                </div>
-            );
-        });
-        
-    
-        return (
-            <div id="top" className={style.Herbs}>
-            <div className={style.topContainer}>
-                <h1>Helpful Herbs</h1>
-                <SearchBox suggestedImages={this.suggestedImages}/>
-            </div>
-            <section className={style.responses}>{illnessData}</section>
-            <a className={style.anchor} href="#top" >Go back to Top</a>
-        </div>
+        let listItems = illnessData.map((hash,index) =>
+            <li key={hash.toString()}>
+                <Herb 
+                    name={hash.name}
+                    science={hash.science}
+                    description={hash.description}
+                    id={hash.id}
+                />
+            </li>
         );
-      }
+        return (
+            <div>
+                <div className={style.topContainer}>
+                    <h1>Helpful Herbs</h1>
+                    <SearchBox suggestedImages={this.suggestedImages}/>
+                </div>
+                <ul>
+                    {listItems}
+                </ul>
+            </div>
+        );
+    }
 
-      suggestedImages = (input) => {
+    suggestedImages = (input) => {
 		this.newSearch(input);
 	};
 }
