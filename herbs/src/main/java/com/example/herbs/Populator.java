@@ -124,65 +124,65 @@ public class Populator implements CommandLineRunner {
 
         //List of Side effects of each herb
         ArrayList<String> ginkgoSideEffects = new ArrayList<>();
-        ginkgoSideEffects.add("Low sodium");
-        ginkgoSideEffects.add("May increase your risk of bleeding.");
-        ginkgoSideEffects.add("Can increase your risk of seizures.");
+        ginkgoSideEffects.add("Low sodium\n");
+        ginkgoSideEffects.add("May increase your risk of bleeding.\n");
+        ginkgoSideEffects.add("Can increase your risk of seizures.\n");
 
         ArrayList<String> aloeVeraSideEffects = new ArrayList<>();
         aloeVeraSideEffects.add("It’s generally safe to use aloe vera as a gel on your skin");
 
         ArrayList<String> turmericSideEffects = new ArrayList<>();
-        turmericSideEffects.add("Abdominal pain/discomfort");
-        turmericSideEffects.add("Skin rash");
-        turmericSideEffects.add("Hives");
+        turmericSideEffects.add("Abdominal pain/discomfort\n");
+        turmericSideEffects.add("Skin rash\n");
+        turmericSideEffects.add("Hives\n");
 
         ArrayList<String> elderBerrySideEffects = new ArrayList<>();
         elderBerrySideEffects.add("These are the side effects if you eat raw elderberries: ");
-        elderBerrySideEffects.add("Dizziness (feeling faint, woozy, weak, or unsteady)");
-        elderBerrySideEffects.add("Numbness (loss of feeling or sensation in a part of your body )");
-        elderBerrySideEffects.add("Vomiting (throwing up)");
-        elderBerrySideEffects.add("Nausea (feeling like you’re going to throw up)");
+        elderBerrySideEffects.add("Dizziness (feeling faint, woozy, weak, or unsteady)\n");
+        elderBerrySideEffects.add("Numbness (loss of feeling or sensation in a part of your body)\n");
+        elderBerrySideEffects.add("Vomiting (throwing up)\n");
+        elderBerrySideEffects.add("Nausea (feeling like you’re going to throw up)\n");
 
         ArrayList<String> licoriceSideEffects = new ArrayList<>();
-        licoriceSideEffects.add("High blood pressure");
-        licoriceSideEffects.add("Lethargy (lack of energy)");
-        licoriceSideEffects.add("Muscle pain");
-        licoriceSideEffects.add("Cardiac arrhythmia (irregular heartbeat)");
-        licoriceSideEffects.add("High sodium retention");
-        licoriceSideEffects.add("Low blood levels of potassium");
-        licoriceSideEffects.add("Reduced desire to have sex");
-        licoriceSideEffects.add("Decreased oil on your scalp");
-        licoriceSideEffects.add("Low blood platelet count");
-        licoriceSideEffects.add("Heavy licorice use can cause early pre-term births");
+        licoriceSideEffects.add("High blood pressure\n");
+        licoriceSideEffects.add("Lethargy (lack of energy)\n");
+        licoriceSideEffects.add("Muscle pain\n");
+        licoriceSideEffects.add("Cardiac arrhythmia (irregular heartbeat)\n");
+        licoriceSideEffects.add("High sodium retention\n");
+        licoriceSideEffects.add("Low blood levels of potassium\n");
+        licoriceSideEffects.add("Reduced desire to have sex\n");
+        licoriceSideEffects.add("Decreased oil on your scalp\n");
+        licoriceSideEffects.add("Low blood platelet count\n");
+        licoriceSideEffects.add("Heavy licorice use can cause early pre-term births\n");
 
         ArrayList<String> chamomileSideEffects = new ArrayList<>();
-        chamomileSideEffects.add("Asthma (respiratory condition which makes it difficult to breathe)");
-        chamomileSideEffects.add("Contact dermatitis (red, itchy rash)");
-        chamomileSideEffects.add("Anaphylaxis (a serious allergic reaction)");
+        chamomileSideEffects.add("Asthma (respiratory condition which makes it difficult to breathe)\n");
+        chamomileSideEffects.add("Contact dermatitis (red, itchy rash)\n");
+        chamomileSideEffects.add("Anaphylaxis (a serious allergic reaction)\n");
 
         ArrayList<String> valerianSideEffects = new ArrayList<>();
-        valerianSideEffects.add("Bitter taste");
-        valerianSideEffects.add("Daytime drowsiness/dullness");
-        valerianSideEffects.add("Depression");
-        valerianSideEffects.add("Diarrhea");
-        valerianSideEffects.add("Dizziness");
-        valerianSideEffects.add("Headache");
-        valerianSideEffects.add("Heart palpitations");
-        valerianSideEffects.add("Impaired alertness");
-        valerianSideEffects.add("Irritability");
-        valerianSideEffects.add("Liver toxicity");
-        valerianSideEffects.add("Sweating");
+        valerianSideEffects.add("Bitter taste\n");
+        valerianSideEffects.add("Daytime drowsiness/dullness\n");
+        valerianSideEffects.add("Depression\n");
+        valerianSideEffects.add("Diarrhea\n");
+        valerianSideEffects.add("Dizziness\n");
+        valerianSideEffects.add("Headache\n");
+        valerianSideEffects.add("Heart palpitations\n");
+        valerianSideEffects.add("Impaired alertness\n");
+        valerianSideEffects.add("Irritability\n");
+        valerianSideEffects.add("Liver toxicity\n");
+        valerianSideEffects.add("Sweating\n");
 
         ArrayList<String> echinaceaSideEffects = new ArrayList<>();
-        echinaceaSideEffects.add("HeadAche");
-        echinaceaSideEffects.add("Dizziness");
-        echinaceaSideEffects.add("Nausea (feeling like you’re going to throw up)");
-        echinaceaSideEffects.add("Constipation (having fewer bowel movements than usual)");
-        echinaceaSideEffects.add("Mild stomach pain");
+        echinaceaSideEffects.add("HeadAche\n");
+        echinaceaSideEffects.add("Dizziness\n");
+        echinaceaSideEffects.add("Nausea (feeling like you’re going to throw up)\n");
+        echinaceaSideEffects.add("Constipation (having fewer bowel movements than usual)\n");
+        echinaceaSideEffects.add("Mild stomach pain\n");
         echinaceaSideEffects.add("Skin rash");
 
         ArrayList<String> papayaLeafSideEffects = new ArrayList<>();
-        papayaLeafSideEffects.add("Mild gastrointestinal disturbance");
+        papayaLeafSideEffects.add("Mild gastrointestinal disturbance\n");
         papayaLeafSideEffects.add("Rash");
 
         ArrayList<String> paoPereiraSideEffects = new ArrayList<>();

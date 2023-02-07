@@ -1,9 +1,6 @@
 package com.example.herbs.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
@@ -16,8 +13,10 @@ public class Herbs {
 
     private String name;
 
+    @Lob
     private String description;
 
+    @Lob
     private String fact;
 
     private String picture; //will be a file path or link to picture
@@ -27,6 +26,7 @@ public class Herbs {
     @ManyToMany
     private Collection<Illness> illnesses;
 
+    @Lob
     private ArrayList<String> sideEffects;
 
     public Herbs (){};
