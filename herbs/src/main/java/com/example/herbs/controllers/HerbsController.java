@@ -1,14 +1,18 @@
 package com.example.herbs.controllers;
 
 import com.example.herbs.models.Herbs;
+import com.example.herbs.models.Illness;
 import com.example.herbs.repositories.HerbsRepo;
+import org.json.JSONArray;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -32,9 +36,18 @@ public class HerbsController {
         return herbsRepo.findById(id).get();
     }
 
-//    @GetMapping("/api/herbs/illness/{illness}")
-//    public Collection<Herbs> getHerbsByIllness(@PathVariable String illness){
-//
-//        return null;
-//    }
+    @GetMapping("/api/herbs/illness/{illness}")
+    public Collection<Herbs> getHerbsByIllness(@PathVariable String illness){
+        Collection<Herbs> herbsList = (Collection<Herbs>) herbsRepo.findAll();
+        Collection<Herbs> returnedHerbs = new ArrayList<>();
+        for(Herbs H: herbsList) {
+            Collection<Illness> illnessCheck = H.getIllnesses();
+            for (Illness I : illnessCheck) {
+                if (I.getName().equalsIgnoreCase(illness)) {
+                    returnedHerbs.add(H);
+                }
+            }
+        }
+        return returnedHerbs;
+    }
 }
