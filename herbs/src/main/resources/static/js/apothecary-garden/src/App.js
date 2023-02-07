@@ -1,6 +1,6 @@
 import PageSwitch from './components/app-router';
 import { BrowserRouter } from 'react-router-dom';
-import style from './style.modules.scss'
+import style from './style.module.scss';
 import Header from './components/header';
 import Footer from './components/footer';
 

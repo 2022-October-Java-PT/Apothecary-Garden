@@ -1,5 +1,7 @@
 package com.example.herbs.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,6 +18,7 @@ public class Illness {
     private String name;
 
     @ManyToMany(mappedBy = "illnesses")
+    @JsonIgnore
     private Collection<Herbs> herbs;
 
     public Illness () {}
