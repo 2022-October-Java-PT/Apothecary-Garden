@@ -1,8 +1,8 @@
-import React from 'react';
-import style from './style.module.scss';
 import Axios from 'axios';
-import SearchBox from '../../components/searchbar';
 import Herb from './herb';
+import React from 'react';
+import SearchBox from '../../components/searchbar';
+import style from './style.module.scss';
 
 export default class IllnessSearch extends React.Component {
     constructor(props) {
@@ -18,7 +18,7 @@ export default class IllnessSearch extends React.Component {
         this.newSearch();
     }
 
-    newSearch(search = 'burns') {
+    newSearch(search = 'cold') {
         let array = [];
         const url = `http://localhost:8080/api/herbs/illness/${search}`;
         Axios.get(url).then((response) => {
@@ -31,7 +31,7 @@ export default class IllnessSearch extends React.Component {
                     fact: element.data?.fact,
                     picture: element.data?.picture,
                     id: element.data?.id,
-                    // sideEffects: element.data.sideEffects,
+                    sideEffects: element.data?.sideEffects,
                 });
             });
             console.log(arrayOfHashes);
@@ -49,6 +49,8 @@ export default class IllnessSearch extends React.Component {
                     name={hash.name}
                     science={hash.science}
                     description={hash.description}
+                    fact={hash.fact}
+                    sideEffects={hash.sideEffects}
                     id={hash.id}
                 />
             </li>
