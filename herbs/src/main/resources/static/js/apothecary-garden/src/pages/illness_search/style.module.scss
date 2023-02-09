@@ -1,0 +1,16 @@
+.returnedHerbs{
+    display: flex;
+    flex-direction: column;
+    margin: 0 3rem;
+}
+
+.herbsList{
+    list-style-type: none;
+}
+.name{
+    text-decoration: underline;
+}
+.herb_image{
+    max-width: 300px;
+    height: auto;
+}
