@@ -41,6 +41,7 @@ export default class IllnessSearch extends React.Component {
         });
     }
     
+    
     render() {
         let illnessData = this.state.illnessData;
         let listItems = illnessData.map((hash,index) =>

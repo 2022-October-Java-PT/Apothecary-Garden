@@ -3,10 +3,15 @@ import style from "./style.module.scss";
 
 const HomePage = () => {
 
+    <div className={style.HomePage}>
+    </div> 
     return (
-        <div className={style.home}>
+        
+        
             <h1>This is home page</h1>
-        </div> 
+            
+        
+       
     ); 
 }
 
