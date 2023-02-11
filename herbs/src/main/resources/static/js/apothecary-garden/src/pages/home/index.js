@@ -1,7 +1,8 @@
-import React from "react";
-import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+
 import Disclaimer from "./disclaimer";
+import Popup from 'reactjs-popup';
+import React from "react";
 import style from "./style.module.scss";
 
 const HomePage = () => {
