@@ -18,6 +18,57 @@ body {
 
 }
 
+.homeContent{
+    background-color: #9999999a;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    margin: 1rem 2.5rem;
+    padding: 1rem 2rem;
+}
+
+.disclaimer_button{
+    display: none;
+}
+.disclaimer_popup{
+    display: inline;
+    text-align: center;
+}
+.disclaimer_header{
+    background-color: forestgreen;
+    color: white;
+    padding: 10px;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 10px;
+    border: black solid 2px;
+}
+.disclaimer_body{
+    background-color: #999999aa;
+    border-radius: 10px;
+    border: black solid 2px;
+}
+.agreement_section{
+    display: flex;
+    justify-content: center;
+}
+.closeButton{
+    background-color: forestgreen;
+    border: none;
+    color: white;
+    margin-top: .25rem;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.closeButton:active {
+    transform: translateY(1px);
+}
+
 
 
 

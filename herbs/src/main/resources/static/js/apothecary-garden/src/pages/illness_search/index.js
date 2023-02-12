@@ -61,7 +61,7 @@ export default class IllnessSearch extends React.Component {
             <div className={style.returnedHerbs}>
                 <div className={style.topContainer}>
                     <h1 className={style.search_header}>Type in an Ailment to find Potential Herbal Remedies</h1>
-                    <SearchBox suggestedImages={this.suggestedImages}/>
+                    <SearchBox className={style.searchBox} suggestedImages={this.suggestedImages}/>
                 </div>
                 <ul className={style.herbsList}>
                     {listItems}

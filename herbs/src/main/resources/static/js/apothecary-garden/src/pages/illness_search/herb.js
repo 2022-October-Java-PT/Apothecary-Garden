@@ -22,7 +22,7 @@ const Herb = ({name, science, description, fact, sideEffects, picture}) => {
                 <h2>Fun Fact</h2>
                 <p>{fact}</p>
                 <h3>Research Link</h3>
-                <p>Further information can be found <a target='_blank' rel='noreferrer' href={science}>Here</a></p>
+                <p>Further information can be found <a className={style.link} target='_blank' rel='noreferrer' href={science}>Here</a></p>
             </section>
         </div>
     );
