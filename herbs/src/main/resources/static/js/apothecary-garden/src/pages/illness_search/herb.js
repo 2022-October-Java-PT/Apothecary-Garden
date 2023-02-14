@@ -40,7 +40,7 @@ const Herb = ({name, science, description, fact, sideEffects, picture}) => {
             <section className={style.description}>
                 <h2>Description</h2>
                 <p>{description}</p>
-                <img className={style.herb_image} src={`../../assets/images/${picture}`} alt='' ></img>
+                <img className={style.herb_image} src={imageReturn(imgList, picture)} alt='' ></img>
             </section>
             <section className={style.expanded_details}>
                 <h2>Side Effects</h2>
