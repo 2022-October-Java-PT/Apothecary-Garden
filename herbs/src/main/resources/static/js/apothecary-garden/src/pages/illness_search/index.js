@@ -45,7 +45,7 @@ export default class IllnessSearch extends React.Component {
     render() {
         let illnessData = this.state.illnessData;
         let listItems = illnessData.map((hash,index) =>
-            <li key={hash.toString()}>
+            <li key={index}>
                 <Herb 
                     name={hash.name}
                     science={hash.science}
@@ -53,9 +53,10 @@ export default class IllnessSearch extends React.Component {
                     fact={hash.fact}
                     sideEffects={hash.sideEffects}
                     picture={hash.picture}
-                    id={hash.id}
+                    id={index.id}
                 />
             </li>
+            
         );
         return (
             <div className={style.returnedHerbs}>

@@ -1,8 +1,36 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import React from 'react';
-import style from './style.module.scss'
+import ahcc from '../../assests/images/ahcc.jpg';
+import aloevera from '../../assests/images/aloevera.jpg';
+import alphaLipiocicAcid from '../../assests/images/alphaLipiocicAcid.jpg';
+import chamomile from '../../assests/images/chamomile.jpg';
+import echinacea from '../../assests/images/echinacea.jpg';
+import elderBerry from '../../assests/images/elderBerry.jpg';
+import folate from '../../assests/images/folate.jpg';
+import ginkgo from '../../assests/images/ginkgo.jpg';
+import licorice from '../../assests/images/licorice.jpg';
+import paopereira from '../../assests/images/paopereira.jpg';
+import papayaLeaf from '../../assests/images/papayaLeaf.jpg';
+import resceratrol from '../../assests/images/resceratrol.jpg';
+import rooibosTea from '../../assests/images/rooibosTea.jpg';
+import style from './style.module.scss';
+import teaTreeOil from '../../assests/images/teaTreeOil.jpg';
+import turmeric from '../../assests/images/turmeric.jpg';
+import valerian from '../../assests/images/valerian.jpg';
+import willowBark from '../../assests/images/willowBark.jpg';
 
 const Herb = ({name, science, description, fact, sideEffects, picture}) => {
+    let imgList = [aloevera, ahcc, alphaLipiocicAcid, chamomile, echinacea, elderBerry, folate, ginkgo, licorice, paopereira, papayaLeaf, resceratrol, rooibosTea, teaTreeOil, turmeric, valerian, willowBark];
+    function imageReturn(array, requiredImage) {
+        let returnedImage;
+        array.forEach(element => {
+            if(element.includes(requiredImage)){
+                returnedImage = element;
+            }
+        });
+        return returnedImage;
+    }
+    console.log(imageReturn(imgList, picture));
     const sideEffectList = sideEffects.map((effect) => 
         <li>{effect}</li>
     );
@@ -12,7 +40,7 @@ const Herb = ({name, science, description, fact, sideEffects, picture}) => {
             <section className={style.description}>
                 <h2>Description</h2>
                 <p>{description}</p>
-                <img className={style.herb_image} src={`../../assets/images/${picture}`}></img>
+                <img className={style.herb_image} src={imageReturn(imgList, picture)} alt='' ></img>
             </section>
             <section className={style.expanded_details}>
                 <h2>Side Effects</h2>
@@ -33,7 +61,7 @@ Herb.propTypes = {
     science: PropTypes.string,
     description: PropTypes.string,
     fact: PropTypes.string,
-    sideEffects: PropTypes.string,
+    
 };
 
 export default Herb;
