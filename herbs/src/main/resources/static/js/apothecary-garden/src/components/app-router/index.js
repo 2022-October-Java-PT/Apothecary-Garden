@@ -17,7 +17,6 @@ const PageSwitch = () => (
         <Route exact path='/illness_search' element={<IllnessSearch />} />
         <Route exact path='/storeHerbs' element={<StoreHerbsPages />} />
         <Route exact path='/searchHerbs' element={<HerbsList />} />
-
     </Routes>
 );
 
