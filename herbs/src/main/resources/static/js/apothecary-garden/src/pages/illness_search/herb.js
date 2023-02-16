@@ -30,7 +30,6 @@ const Herb = ({name, science, description, fact, sideEffects, picture}) => {
         });
         return returnedImage;
     }
-    console.log(imageReturn(imgList, picture));
     const sideEffectList = sideEffects.map((effect) => 
         <li>{effect}</li>
     );
