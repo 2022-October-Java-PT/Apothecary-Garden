@@ -36,6 +36,12 @@ public class HerbsController {
         return herbsRepo.findById(id).get();
     }
 
+  @GetMapping("api/herbs/findByLetter/{letter}")
+   public List<Herbs> findHerbsByFirstLetter(@PathVariable("letter") String letter) {
+        return herbsRepo.findByNameStartingWithIgnoreCase(letter);
+ }
+
+
     @GetMapping("/api/herbs/illness/{illness}")
     public Collection<Herbs> getHerbsByIllness(@PathVariable String illness){
         Collection<Herbs> herbsList = (Collection<Herbs>) herbsRepo.findAll();
@@ -48,6 +54,9 @@ public class HerbsController {
                 }
             }
         }
+
+
+
         return returnedHerbs;
     }
 }

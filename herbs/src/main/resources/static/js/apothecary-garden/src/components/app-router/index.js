@@ -5,6 +5,7 @@ import HomePage from '../../pages/home'
 import IllnessSearch from '../../pages/illness_search';
 import React from 'react';
 import StoreHerbsPages from '../../pages/storeHerbs';
+import HerbsList from '../../pages/herbs_search';
 
 const PageSwitch = () => (
     <Routes>
@@ -13,6 +14,8 @@ const PageSwitch = () => (
         <Route exact path='/herbs/:name' element={<HerbPage />} />
         <Route exact path='/illness_search' element={<IllnessSearch />} />
         <Route exact path='/storeHerbs' element={<StoreHerbsPages />} />
+        <Route exact path='/searchHerbs' element={<HerbsList />} />
+
     </Routes>
 );
 
