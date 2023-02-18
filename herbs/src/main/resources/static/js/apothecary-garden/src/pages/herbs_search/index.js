@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import axios from 'axios';
 import style from './style.module.scss'
+import { useState } from 'react';
 
 function HerbsList() {
   const [herbs, setHerbs] = useState([]);
@@ -28,6 +28,7 @@ function HerbsList() {
           <h2 className={style.displayedHerb} key={herb.id}>{herb.name}</h2>
         ))}
       </div>
+      
     </>
   );
 }
