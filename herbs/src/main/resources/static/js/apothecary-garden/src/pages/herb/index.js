@@ -34,6 +34,7 @@ const HerbPage = () => {
             {loading ? <h3>Loading...</h3> :
                 <div key={herb.id}>
                     <h1 className={style.herb_name}>{herb.name}</h1>
+                    <button onClick={() => this.props.add(herb.id)}>Add to Fav</button>
                     <h2>Description</h2>
                     <p className={style.herb_description}>{herb.description}</p>
                     <h2>Side Effects</h2>
