@@ -39,8 +39,7 @@ export default class IllnessSearch extends React.Component {
                 illnessData: arrayOfHashes
             });
         });
-    }
-    
+    }    
     
     render() {
         let illnessData = this.state.illnessData;
@@ -62,7 +61,7 @@ export default class IllnessSearch extends React.Component {
             <div className={style.returnedHerbs}>
                 <div className={style.topContainer}>
                     <h1 className={style.search_header}>Type in an Ailment to find Potential Herbal Remedies</h1>
-                    <SearchBox className={style.searchBox} suggestedImages={this.suggestedImages}/>
+                    <SearchBox className={style.searchBox} suggestedHerbs={this.suggestedHerbs}/>
                 </div>
                 <ul className={style.herbsList}>
                     {listItems}
@@ -71,7 +70,7 @@ export default class IllnessSearch extends React.Component {
         );
     }
 
-    suggestedImages = (input) => {
+    suggestedHerbs = (input) => {
 		this.newSearch(input);
 	};
 }

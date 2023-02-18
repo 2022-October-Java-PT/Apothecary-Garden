@@ -12,8 +12,8 @@ class SearchBox extends Component {
     handleKeyUp = (event) => {
         event.preventDefault();
         this.userInput.current.value === ''
-            ? this.props.suggestedImages()
-            : this.props.suggestedImages(this.userInput.current.value);
+            ? this.props.suggestedHerbs()
+            : this.props.suggestedHerbs(this.userInput.current.value);
     };
 
     render() {
