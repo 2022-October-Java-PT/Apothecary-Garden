@@ -1,3 +1,4 @@
+// import { IoIosHeart, IoIosHeartEmpty } from 'react-icons'
 import React, { useEffect, useState } from 'react';
 
 import Axios from 'axios';
@@ -34,6 +35,19 @@ const HerbPage = () => {
             {loading ? <h3>Loading...</h3> :
                 <div key={herb.id}>
                     <h1 className={style.herb_name}>{herb.name}</h1>
+                    {/* <div>
+                        {favorites.includes(i) ? (
+                            <IoIosHeart
+                                onClick={() => addFav({ herbs, i })}
+                                style={{ color: 'red' }}
+                            />
+                        ) : (
+                                <IoIosHeartEmpty
+                                onClick={() => addFav ({ herbs, i})}
+                        style={{ color: 'red' }}
+                        />
+                        )}
+                        </div> */}
                     <button onClick={() => this.props.add(herb.id)}>Add to Fav</button>
                     <h2>Description</h2>
                     <p className={style.herb_description}>{herb.description}</p>

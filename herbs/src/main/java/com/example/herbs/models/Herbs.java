@@ -23,6 +23,9 @@ public class Herbs {
 
     private String science; //specific link to scientific article
 
+    @ManyToOne
+    private User user;
+
     @ManyToMany
     private Collection<Illness> illnesses;
 
@@ -30,6 +33,17 @@ public class Herbs {
     private ArrayList<String> sideEffects;
 
     public Herbs (){};
+
+    public Herbs(String name, String description, String fact, String picture, String science, User user, Collection<Illness> illnesses, ArrayList<String> sideEffects) {
+        this.name = name;
+        this.description = description;
+        this.fact = fact;
+        this.picture = picture;
+        this.science = science;
+        this.user = user;
+        this.illnesses = illnesses;
+        this.sideEffects = sideEffects;
+    }
 
     public Herbs(String name, String description, String fact, String picture, String science, Collection<Illness> illnesses, ArrayList<String> sideEffects) {
         this.name = name;
@@ -73,6 +87,23 @@ public class Herbs {
         return sideEffects;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Herbs herbs = (Herbs) o;
+        return Objects.equals(id, herbs.id) && Objects.equals(name, herbs.name) && Objects.equals(description, herbs.description) && Objects.equals(fact, herbs.fact) && Objects.equals(picture, herbs.picture) && Objects.equals(science, herbs.science) && Objects.equals(user, herbs.user) && Objects.equals(illnesses, herbs.illnesses) && Objects.equals(sideEffects, herbs.sideEffects);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, description, fact, picture, science, illnesses, sideEffects);
+    }
+
     @Override
     public String toString() {
         return "Herbs{" +
@@ -82,21 +113,9 @@ public class Herbs {
                 ", fact='" + fact + '\'' +
                 ", picture='" + picture + '\'' +
                 ", science='" + science + '\'' +
+                ", user=" + user +
                 ", illnesses=" + illnesses +
                 ", sideEffects=" + sideEffects +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Herbs herbs = (Herbs) o;
-        return Objects.equals(id, herbs.id) && Objects.equals(name, herbs.name) && Objects.equals(description, herbs.description) && Objects.equals(fact, herbs.fact) && Objects.equals(picture, herbs.picture) && Objects.equals(science, herbs.science) && Objects.equals(illnesses, herbs.illnesses) && Objects.equals(sideEffects, herbs.sideEffects);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, description, fact, picture, science, illnesses, sideEffects);
     }
 }

@@ -34,7 +34,11 @@ function HerbsList() {
       <div>
         {noData && <p>No data available for this letter</p>}
         {herbs.map((herb) => (
-          <h2 className={style.displayedHerb} key={herb.id}>{herb.name}</h2>
+           <a key={herb.id} href={`herbs/${herb.name}`}>
+                <div className={style.herb_section}>
+                    <h2>{herb.name}</h2>
+                </div>
+                </a>
         ))}
       </div>
       
