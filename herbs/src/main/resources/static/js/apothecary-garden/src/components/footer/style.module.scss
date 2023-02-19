@@ -3,15 +3,16 @@
 .footer {
    padding: 20px;
    display: flex;
-   justify-content: center;
+   justify-content: left;
    margin: 0 auto;
    width: 90%;
-   background-color: #2ce4ad;
-   border: 5px solid white;
+   // background-color: #2ce4ad;
+   // border: 5px solid white;
    border-radius: 25px;
+   color: aliceblue;
 
    & h3 {
-      font-family: 'roman', cursive;
+      font-family: 'roboto', sans-serif;
       font-size: 1.3rem;
    }
 }
