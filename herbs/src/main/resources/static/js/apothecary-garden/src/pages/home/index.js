@@ -10,11 +10,17 @@ const HomePage = () => {
         <div className={style.homeContent}>
         
         <div class="col">
+
+        <button type="button">Herb Search</button>
+            <p></p>
+            <button type="button">Illness search</button>
+            
             <h1>Herbal Medicine History</h1>
             <p>
             Archaeological evidence indicates that the use of medicinal plants dates back to the Paleolithic age, approximately 60,000 years ago. Written evidence of herbal remedies dates back over 5,000 years to the Sumerians, who compiled lists of plants.
             </p>
-            <button type="button">Herb Search</button>
+            
+            
             
         </div>
             {/* <center>
