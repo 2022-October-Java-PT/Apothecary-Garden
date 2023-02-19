@@ -5,10 +5,18 @@ import style from './style.module.scss'
 function IllnessList() {
   const [illnesses, setIllnesses] = useState([]);
   const [herbs, setHerbs] = useState([]);
+  const [noData, setNoData] = useState(false);
   
   const handleLetterClick = async (letter) => {
     try {
       const response = await axios.get(`http://localhost:8080/api/illness/findByLetter/${letter}`);
+      if (response.data.length === 0) {
+        setNoData(true);
+        
+      } else {
+        setNoData(false);
+        
+      }
       setIllnesses(response.data);
     } catch (error) {
       console.error(error);
@@ -34,6 +42,7 @@ function IllnessList() {
         ))}
       </div>
       <div>
+        {noData && <p>No data available for this letter</p>}
         {illnesses.map((illness) => (
           <button className={style.displayedIllness} onClick={() => herbList(illness.name)} key={illness.id}>{illness.name}</button>
         ))}
