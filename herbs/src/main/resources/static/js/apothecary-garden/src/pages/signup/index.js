@@ -9,8 +9,8 @@ const Signup = (props) => {
     const handleLogin = () => {
         
         const userData = {
-            username: username,
-            password: password
+            userName: username,
+            userPassword: password
         };
 
         Axios.post('http://localhost:8080/api/user/new-user', userData).then((response) => {
@@ -18,7 +18,7 @@ const Signup = (props) => {
             props.history.push('/portal');
         });
 
-        window.location.href-'/portal';
+        window.location.href='/portal';
     }
 
     const [username, setUsername] = useState('');

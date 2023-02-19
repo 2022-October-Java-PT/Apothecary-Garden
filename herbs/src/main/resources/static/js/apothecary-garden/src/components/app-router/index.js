@@ -10,6 +10,9 @@ import React from 'react';
 import StoreHerbsPages from '../../pages/storeHerbs';
 import ContactPage from '../../pages/contact';
 import IllnessList from '../../pages/illness_search/illness_searchbar';
+import Login from '../../pages/login';
+import Signup from '../../pages/signup';
+import PortalHome from '../../portal/portal-pages/portal-home';
 
 const PageSwitch = () => (
     <Routes>
@@ -24,6 +27,10 @@ const PageSwitch = () => (
         {/* Comment out the following. Herbs page for demo purposes only */}
         <Route exact path='/herbs' element={<Herbs />} />
         <Route exact path='/illness_search' element={<IllnessList />} />
+        <Route exact path='/login' element={<Login />} />
+        <Route exact path='/signup' element={<Signup />} />
+        <Route exact path='/portal' element={<PortalHome />} />
+        
     </Routes>
 );
 

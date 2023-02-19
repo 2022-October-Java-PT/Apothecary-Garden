@@ -1,11 +1,12 @@
 import PageSwitch from './components/app-router';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import style from './style.module.scss';
 import Header from './components/header';
 import Footer from './components/footer';
+import React from 'react';
 
+const App = () => {
 
-function App() {
   return (
     <BrowserRouter>
       <Header className={style.header}/>
@@ -14,6 +15,7 @@ function App() {
       </div>
       <Footer className={style.footer} />
     </BrowserRouter>
+    
   );
 }
 

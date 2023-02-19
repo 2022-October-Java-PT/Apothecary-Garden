@@ -16,7 +16,7 @@ const Login = (props) => {
         const fetchData = async () => {
             const result = await Axios(`http://localhost:8080/api/user/${userName}`);
             console.log(result.data);
-            setUsernameSession(result.data.setUsername);
+            setUsernameSession(result.data.userName);
             props.history.push('/portal');
         }
 
