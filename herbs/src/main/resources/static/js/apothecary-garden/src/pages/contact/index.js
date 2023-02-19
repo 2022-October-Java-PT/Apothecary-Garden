@@ -1,13 +1,19 @@
 import React from "react";
-import style from './style.module.scss'
-import profileNate from '../../assests/images/Profile-pic-nate.jpg';
+import github from '../../assests/images/github-mark.png';
+import linkedIn from '../../assests/images/linkedIn.png';
 import profileDom from '../../assests/images/Dom.jpg';
+import profileNate from '../../assests/images/Profile-pic-nate.jpg';
 import profileNuhamin from '../../assests/images/nuhamin.jpg';
-// import profileWolf from '../../assests/images/wolf.jpg';
+import profileWolf from '../../assests/images/profileWolf.JPG';
+import style from './style.module.scss'
+
 // import profileDonna from '../../assests/images/donna.jpg';
 
 
+
+
 const ContactPage = () => {
+
     return (
         <div className={style.contact_page}>
             <section className={style.profiles}>
@@ -17,6 +23,8 @@ const ContactPage = () => {
                     </img>
                     <p className={style.position_title}>DEVELOPER</p>
                     <p className={style.personal_description}>Nathan is an Aerospace Engineer currently enrolled in the WCCI coding bootcamp.  he plans to become a full stack developer within the technology industry utilizing his background in aerospace technology development to build a career creating software to further the industry</p>
+                    <a href='https://github.com/WolfgangA1'><img src={github} alt='Github Logo'></img></a>
+                    <a href='https://github.com/WolfgangA1'><img src={linkedIn} alt='LinkedIn Logo'></img></a>
                 </article>
                 <article className={style.profile_column}>
                     <h2 className={style.profile_name}>DONNA MAGBAG</h2>
@@ -24,27 +32,35 @@ const ContactPage = () => {
                     </img> */}
                     <p className={style.position_title}>DEVELOPER</p>
                     <p className={style.personal_description}>Donna is a current Student at WCCI pursuing a career in software development.</p>
+                    <a href='https://github.com/WolfgangA1'><img src={github} alt='Github Logo'></img></a>
+                    <a href='https://github.com/WolfgangA1'><img src={linkedIn} alt='LinkedIn Logo'></img></a>
                 </article>
                 <article className={style.profile_column}>
                     <h2 className={style.profile_name}>WOLFGANG ASHCRAFT</h2>
-                    {/* <img src={profileWolf} className={style.profile_img} alt="profile pic prince">
-                    </img> */}
+                    <img src={profileWolf} className={style.profile_img} alt="profile pic wolfgang">
+                    </img> 
                     <p className={style.position_title}>DEVELOPER</p>
                     <p className={style.personal_description}>Wolf is a current Student at WCCI pursuing a career in software development.</p>
+                    <a href='https://github.com/WolfgangA1'><img src={github} alt='Github Logo'></img></a>
+                    <a href='https://www.linkedin.com/in/wolfgang-ashcraft/'><img src={linkedIn} alt='LinkedIn Logo'></img></a>
                 </article>
                 <article className={style.profile_column}>
                     <h2 className={style.profile_name}>DOMINIQUE HAWKINS</h2>
-                    <img src={profileDom} className={style.profile_img} alt="profile pic prince">
+                    <img src={profileDom} className={style.profile_img} alt="profile pic Dominique">
                     </img>
                     <p className={style.position_title}>DEVELOPER</p>
                     <p className={style.personal_description}>Dom is a current Student at WCCI pursuing a career in software development.</p>
+                    <a href='https://github.com/WolfgangA1'><img src={github} alt='Github Logo'></img></a>
+                    <a href='https://github.com/WolfgangA1'><img src={linkedIn} alt='LinkedIn Logo'></img></a>
                 </article>
                 <article className={style.profile_column}>
                     <h2 className={style.profile_name}>NUHAMIN TESFAYE</h2>
-                    <img src={profileNuhamin} className={style.profile_img} alt="profile pic prince">
+                    <img src={profileNuhamin} className={style.profile_img} alt="profile pic Nuhamin">
                     </img>
                     <p className={style.position_title}>DEVELOPER</p>
                     <p className={style.personal_description}>Nuhamin is a current Student at WCCI pursuing a career in software development.</p>
+                    <a href='https://github.com/WolfgangA1'><img src={github} alt='Github Logo'></img></a>
+                    <a href='https://github.com/WolfgangA1'><img src={linkedIn} alt='LinkedIn Logo'></img></a>
                 </article>
             </section>
         </div>

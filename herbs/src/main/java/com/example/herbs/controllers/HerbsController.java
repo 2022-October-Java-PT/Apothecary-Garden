@@ -4,10 +4,9 @@ import com.example.herbs.models.Herbs;
 import com.example.herbs.models.Illness;
 import com.example.herbs.repositories.HerbsRepo;
 import org.json.JSONArray;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -36,11 +35,10 @@ public class HerbsController {
         return herbsRepo.findById(id).get();
     }
 
-  @GetMapping("api/herbs/findByLetter/{letter}")
-   public List<Herbs> findHerbsByFirstLetter(@PathVariable("letter") String letter) {
+    @GetMapping("api/herbs/findByLetter/{letter}")
+    public List<Herbs> findHerbsByFirstLetter(@PathVariable("letter") String letter) {
         return herbsRepo.findByNameStartingWithIgnoreCase(letter);
- }
-
+    }
 
     @GetMapping("/api/herbs/illness/{illness}")
     public Collection<Herbs> getHerbsByIllness(@PathVariable String illness){
@@ -54,9 +52,27 @@ public class HerbsController {
                 }
             }
         }
-
-
-
         return returnedHerbs;
     }
+
+//    @PostMapping("/api/herbs/add-herb")
+//    public Collection<Herbs> addHerbs(@RequestBody String body) throws JSONException {
+//        JSONObject newHerb = new JSONObject(body);
+//        String herbName = newHerb.getString("name");
+//        String herbDescription = newHerb.getString("description");
+//        String herbFact = newHerb.getString("fact");
+//        String herbPicture = newHerb.getString("picture");
+//        String herbScience = newHerb.getString("science");
+//        Collection<Illness> herbIllnesses= newHerb.getString("illnesses");
+//        ArrayList<String> herbSideEffects = newHerb.getString("sideEffects");
+//        Optional<Herbs> herbsToAddOpt = herbsRepo.findByName(herbName);
+//        if(herbsToAddOpt.isEmpty()){
+//            Herbs herbsToAdd = new Herbs(herbName, herbDescription, herbFact, herbPicture,
+//                    herbScience, herbIllnesses, herbSideEffects);
+//            herbsRepo.save(herbsToAdd);
+//        }
+//        return (Collection<Herbs>) herbsRepo.findAll();
+//    }
+
+
 }
