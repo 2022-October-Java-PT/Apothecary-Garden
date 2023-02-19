@@ -31,7 +31,7 @@ public class UserController {
     public Collection<AppUser> newUser(@RequestBody String body) throws JSONException {
         JSONObject newUser = new JSONObject(body);
         String userName = newUser.getString("userName");
-        String userPassword = newUser.getString("password");
+        String userPassword = newUser.getString("userPassword");
         Optional<AppUser> optNewUser = userRepo.findByUserNameIgnoreCase(userName);
         if(optNewUser.isEmpty()){
             AppUser userToAdd = new AppUser(userName, userPassword);

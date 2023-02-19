@@ -1,13 +1,13 @@
 export const getUsername = () => {
-    const usernameStr = sessionStorage.getItem("username");
+    const usernameStr = sessionStorage.getItem("userName");
     if (usernameStr) return JSON.parse(usernameStr);
     else return null;
 }
 
 export const setUsernameSession = (username) => {
-    sessionStorage.setItem("username", JSON.stringify(username));
+    sessionStorage.setItem("userName", JSON.stringify(username));
 }
 
 export const removeUsernameSession = () => {
-    sessionStorage.removeItem("username");
+    sessionStorage.removeItem("userName");
 }
