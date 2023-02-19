@@ -4,15 +4,12 @@ html{
 
 .container {
     background-color: #0f0f0ff1;
-    display: grid;
     color: white;
     text-shadow: 1px 1px 2px black;
     margin: 50px 85px;
     border-radius: 25px;
     padding: 10px;
     font-family: 'gg sans', sans-serif;
-
-    
 
     nav{
         display: flex;
@@ -52,44 +49,59 @@ html{
         border-radius: 25px;
     }
 
-    h1{
-        font-size: 38px;
-    }
-
     h4{
-        font-size: 32px;
+        font-size: 26px;
     }
+}
 
-    img{
-        border-radius: 25px;
-        max-width: 450px;
-        max-height: 450px;
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
-    p{
-        font-size: 24px;
-        line-height: 28px;
-        font-family: 'Arial Narrow', Arial, sans-serif;
-    }
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: column;
+}
 
-    a{
-        font-family: 'gg sans', sans-serif;
-        font-size: 1.1rem;
-        font-weight: bold;
-        text-decoration: none;
-        color: white;
-        padding: 8px 25px;
-        transition: all .5s ease;  
-    }
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    height: 750px;
+    border: 1px solid black;
+    margin: 10px;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(to top, #555, 50%, white 50%);
+    background-size: 100% 200%;
+    transition: all .8s;
 
-    a:hover{
+    img {
+        width: 200px;
+        height: 200px;
         background-color: white;
-        color: black;
-        box-shadow: 0 0 10px white;
+        padding: 5px;
         border-radius: 25px;
     }
+}
 
+.box:hover {
+    background-position: left bottom;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px #555;
+}
+
+.storingHerbs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.heading {
+    text-align: center;
 }
