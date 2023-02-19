@@ -10,13 +10,13 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-public class User {
+public class AppUser {
 
     @Id
     @GeneratedValue
     private Long id;
     private String userName;
-    private String password;
+    private String userPassword;
 
     @OneToMany (mappedBy = "user")
     @JsonIgnore
@@ -30,21 +30,25 @@ public class User {
         return userName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUserPassword() {
+        return userPassword;
     }
 
     public Collection<Herbs> getFavorites() {
         return favorites;
     }
 
-    protected User() {
+    public AppUser() {
     }
 
-    public User(Long id, String userName, String password, Collection<Herbs> favorites) {
-        this.id = id;
+    public AppUser(String userName, String userPassword) {
         this.userName = userName;
-        this.password = password;
+        this.userPassword = userPassword;
+    }
+
+    public AppUser(String userName, String userPassword, Collection<Herbs> favorites) {
+        this.userName = userName;
+        this.userPassword = userPassword;
         this.favorites = favorites;
     }
 
@@ -52,13 +56,13 @@ public class User {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return Objects.equals(id, user.id) && Objects.equals(userName, user.userName) && Objects.equals(password, user.password) && Objects.equals(favorites, user.favorites);
+        AppUser appUser = (AppUser) o;
+        return Objects.equals(id, appUser.id) && Objects.equals(userName, appUser.userName) && Objects.equals(userPassword, appUser.userPassword) && Objects.equals(favorites, appUser.favorites);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, userName, password, favorites);
+        return Objects.hash(id, userName, userPassword, favorites);
     }
 
     @Override
@@ -66,8 +70,8 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
-                ", herbs=" + favorites +
+                ", userPassword='" + userPassword + '\'' +
+                ", favorites=" + favorites +
                 '}';
     }
 }

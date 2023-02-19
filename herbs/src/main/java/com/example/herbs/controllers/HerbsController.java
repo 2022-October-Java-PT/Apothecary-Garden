@@ -55,32 +55,24 @@ public class HerbsController {
         return returnedHerbs;
     }
 
-    @PostMapping("/api/herbs/add-herb")
-    public Collection<Herbs> addHerbs(@RequestBody String body) throws JSONException {
-        JSONObject newHerb = new JSONObject(body);
-        String herbName = newHerb.getString("name");
-        String herbDescription = newHerb.getString("description");
-        String herbFact = newHerb.getString("fact");
-        String herbPicture = newHerb.getString("picture");
-        String herbScience = newHerb.getString("science");
-        Collection<Illness> herbIllnesses= newHerb.getString("illnesses");
-        ArrayList<String> herbSideEffects = newHerb.getString("sideEffects");
-        Optional<Herbs> herbsToAddOpt = herbsRepo.findByName(herbName);
-        if(herbsToAddOpt.isEmpty()){
-            Herbs herbsToAdd = new Herbs(herbName, herbDescription, herbFact, herbPicture,
-                    herbScience, herbIllnesses, herbSideEffects);
-            herbsRepo.save(herbsToAdd);
-        }
-        return (Collection<Herbs>) herbsRepo.findAll();
-    }
+//    @PostMapping("/api/herbs/add-herb")
+//    public Collection<Herbs> addHerbs(@RequestBody String body) throws JSONException {
+//        JSONObject newHerb = new JSONObject(body);
+//        String herbName = newHerb.getString("name");
+//        String herbDescription = newHerb.getString("description");
+//        String herbFact = newHerb.getString("fact");
+//        String herbPicture = newHerb.getString("picture");
+//        String herbScience = newHerb.getString("science");
+//        Collection<Illness> herbIllnesses= newHerb.getString("illnesses");
+//        ArrayList<String> herbSideEffects = newHerb.getString("sideEffects");
+//        Optional<Herbs> herbsToAddOpt = herbsRepo.findByName(herbName);
+//        if(herbsToAddOpt.isEmpty()){
+//            Herbs herbsToAdd = new Herbs(herbName, herbDescription, herbFact, herbPicture,
+//                    herbScience, herbIllnesses, herbSideEffects);
+//            herbsRepo.save(herbsToAdd);
+//        }
+//        return (Collection<Herbs>) herbsRepo.findAll();
+//    }
 
 
-//    @DeleteMapping("/api/{userName}/journals/{id}/delete-journal-entry")
-//    public Collection<Journal> deleteJournalEntry(@PathVariable String userName, @PathVariable Long id) throws JSONException {
-//        Optional<Journal> journalEntryToRemoveOpt = journalRepository.findById(id);
-//        journalEntryToRemoveOpt.ifPresent(Journal -> journalRepository.deleteById(id));
-//        Optional<User> user = userRepository.findByUsernameIgnoreCase(userName);
-//        return user.get().getJournals();
-
-    }
 }
