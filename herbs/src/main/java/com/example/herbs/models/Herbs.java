@@ -24,7 +24,7 @@ public class Herbs {
     private String science; //specific link to scientific article
 
     @ManyToOne
-    private User user;
+    private AppUser user;
 
     @ManyToMany
     private Collection<Illness> illnesses;
@@ -34,7 +34,7 @@ public class Herbs {
 
     public Herbs (){};
 
-    public Herbs(String name, String description, String fact, String picture, String science, User user, Collection<Illness> illnesses, ArrayList<String> sideEffects) {
+    public Herbs(String name, String description, String fact, String picture, String science, AppUser user, Collection<Illness> illnesses, ArrayList<String> sideEffects) {
         this.name = name;
         this.description = description;
         this.fact = fact;
@@ -87,7 +87,7 @@ public class Herbs {
         return sideEffects;
     }
 
-    public User getUser() {
+    public AppUser getUser() {
         return user;
     }
 
