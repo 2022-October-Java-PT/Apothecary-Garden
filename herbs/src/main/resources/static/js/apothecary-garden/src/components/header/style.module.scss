@@ -65,3 +65,25 @@
  
   
 };
+
+.login{
+  display: flex;
+
+  & a {
+
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  & a:hover {
+    background-color: #89dba2;
+    color: white;
+    transition: .5s;
+    
+  }
+}

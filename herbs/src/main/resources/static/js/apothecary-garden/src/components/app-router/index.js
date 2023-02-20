@@ -30,7 +30,6 @@ const PageSwitch = () => (
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/signup' element={<Signup />} />
         <Route exact path='/portal' element={<PortalHome />} />
-        
     </Routes>
 );
 
