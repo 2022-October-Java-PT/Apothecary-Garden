@@ -3,6 +3,7 @@ import 'reactjs-popup/dist/index.css';
 import Disclaimer from "./disclaimer";
 import React from "react";
 import style from "./style.module.scss";
+import HerbSpotlight from './herbSpotlight';
 
 const HomePage = () => {
     const [open, setOpen] = React.useState(true)
@@ -37,7 +38,9 @@ const HomePage = () => {
                     Search for illnesses here:
                 </h1>
             </center> */}
-
+        <div>
+            <HerbSpotlight />
+        </div>
             
             
             <button className={style.disclaimer_button} onClick={() => setOpen(true)}>Disclaimer</button>
