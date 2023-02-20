@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.ThreadLocalRandom;
 
 @RestController
 @CrossOrigin
@@ -53,6 +54,11 @@ public class HerbsController {
             }
         }
         return returnedHerbs;
+    }
+
+    @GetMapping("/api/herbs/herbSpotlight")
+    public Optional<Herbs> getHerbSpotlight(){
+        return herbsRepo.findById(ThreadLocalRandom.current().nextLong(32,49));
     }
 
 //    @PostMapping("/api/herbs/add-herb")
