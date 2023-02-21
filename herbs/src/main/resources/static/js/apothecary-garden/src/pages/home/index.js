@@ -1,9 +1,10 @@
 import 'reactjs-popup/dist/index.css';
 
 import Disclaimer from "./disclaimer";
+import HerbSpotlight from './herbSpotlight';
+import { NavLink } from 'react-router-dom';
 import React from "react";
 import style from "./style.module.scss";
-import HerbSpotlight from './herbSpotlight';
 
 const HomePage = () => {
     const [open, setOpen] = React.useState(true)
@@ -12,11 +13,17 @@ const HomePage = () => {
         
         <div class="col">
 
-        <button type="button">Herb Search</button>
+       
+
+        <button type="button">
+        <NavLink to='/searchHerbs' button type="button">Herb Search</NavLink>
+        </button>
             <p></p>
-            <button type="button">Illness search</button>
+            <button type="button">
+            <NavLink to='/illness_search'>Illness Search</NavLink>
+            </button>
             
-            <h1>Herbal Medicine History</h1>
+            {/* <h1>Herbal Medicine History</h1> */}
             <p>
             Archaeological evidence indicates that the use of medicinal plants dates back to the Paleolithic age, approximately 60,000 years ago. Written evidence of herbal remedies dates back over 5,000 years to the Sumerians, who compiled lists of plants.
             </p>
