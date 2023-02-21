@@ -2,10 +2,7 @@ package com.example.herbs.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -18,9 +15,8 @@ public class AppUser {
     private String userName;
     private String userPassword;
 
-    @OneToMany (mappedBy = "user")
-    @JsonIgnore
-    private Collection<Herbs> favorites;
+    @OneToOne
+    private Favorites userFavorites;
 
     public Long getId() {
         return id;
@@ -34,8 +30,8 @@ public class AppUser {
         return userPassword;
     }
 
-    public Collection<Herbs> getFavorites() {
-        return favorites;
+    public Favorites getUserFavorites() {
+        return userFavorites;
     }
 
     public AppUser() {
@@ -46,10 +42,10 @@ public class AppUser {
         this.userPassword = userPassword;
     }
 
-    public AppUser(String userName, String userPassword, Collection<Herbs> favorites) {
+    public AppUser(String userName, String userPassword, Favorites userFavorites) {
         this.userName = userName;
         this.userPassword = userPassword;
-        this.favorites = favorites;
+        this.userFavorites = userFavorites;
     }
 
     @Override
@@ -57,21 +53,21 @@ public class AppUser {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AppUser appUser = (AppUser) o;
-        return Objects.equals(id, appUser.id) && Objects.equals(userName, appUser.userName) && Objects.equals(userPassword, appUser.userPassword) && Objects.equals(favorites, appUser.favorites);
+        return Objects.equals(id, appUser.id) && Objects.equals(userName, appUser.userName) && Objects.equals(userPassword, appUser.userPassword) && Objects.equals(userFavorites, appUser.userFavorites);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, userName, userPassword, favorites);
+        return Objects.hash(id, userName, userPassword, userFavorites);
     }
 
     @Override
     public String toString() {
-        return "User{" +
+        return "AppUser{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", userPassword='" + userPassword + '\'' +
-                ", favorites=" + favorites +
+                ", userFavorites=" + userFavorites +
                 '}';
     }
 }
