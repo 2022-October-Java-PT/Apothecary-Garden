@@ -1,5 +1,7 @@
 package com.example.herbs.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,8 +25,8 @@ public class Herbs {
 
     private String science; //specific link to scientific article
 
-    @ManyToOne
-    private AppUser user;
+//    @ManyToOne
+//    private AppUser user;
 
     @ManyToMany
     private Collection<Illness> illnesses;
@@ -32,18 +34,11 @@ public class Herbs {
     @Lob
     private ArrayList<String> sideEffects;
 
-    public Herbs (){};
+    @ManyToMany(mappedBy = "favorites")
+    @JsonIgnore
+    private Collection<Favorites> favorite;
 
-    public Herbs(String name, String description, String fact, String picture, String science, AppUser user, Collection<Illness> illnesses, ArrayList<String> sideEffects) {
-        this.name = name;
-        this.description = description;
-        this.fact = fact;
-        this.picture = picture;
-        this.science = science;
-        this.user = user;
-        this.illnesses = illnesses;
-        this.sideEffects = sideEffects;
-    }
+    public Herbs (){};
 
     public Herbs(String name, String description, String fact, String picture, String science, Collection<Illness> illnesses, ArrayList<String> sideEffects) {
         this.name = name;
@@ -53,6 +48,17 @@ public class Herbs {
         this.science = science;
         this.illnesses = illnesses;
         this.sideEffects = sideEffects;
+    }
+
+    public Herbs(String name, String description, String fact, String picture, String science, Collection<Illness> illnesses, ArrayList<String> sideEffects, Collection<Favorites> favorite) {
+        this.name = name;
+        this.description = description;
+        this.fact = fact;
+        this.picture = picture;
+        this.science = science;
+        this.illnesses = illnesses;
+        this.sideEffects = sideEffects;
+        this.favorite = favorite;
     }
 
     public Long getId() {
@@ -87,8 +93,8 @@ public class Herbs {
         return sideEffects;
     }
 
-    public AppUser getUser() {
-        return user;
+    public Collection<Favorites> getFavorite() {
+        return favorite;
     }
 
     @Override
@@ -96,12 +102,12 @@ public class Herbs {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Herbs herbs = (Herbs) o;
-        return Objects.equals(id, herbs.id) && Objects.equals(name, herbs.name) && Objects.equals(description, herbs.description) && Objects.equals(fact, herbs.fact) && Objects.equals(picture, herbs.picture) && Objects.equals(science, herbs.science) && Objects.equals(user, herbs.user) && Objects.equals(illnesses, herbs.illnesses) && Objects.equals(sideEffects, herbs.sideEffects);
+        return Objects.equals(id, herbs.id) && Objects.equals(name, herbs.name) && Objects.equals(description, herbs.description) && Objects.equals(fact, herbs.fact) && Objects.equals(picture, herbs.picture) && Objects.equals(science, herbs.science) && Objects.equals(illnesses, herbs.illnesses) && Objects.equals(sideEffects, herbs.sideEffects) && Objects.equals(favorite, herbs.favorite);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, fact, picture, science, illnesses, sideEffects);
+        return Objects.hash(id, name, description, fact, picture, science, illnesses, sideEffects, favorite);
     }
 
     @Override
@@ -113,9 +119,9 @@ public class Herbs {
                 ", fact='" + fact + '\'' +
                 ", picture='" + picture + '\'' +
                 ", science='" + science + '\'' +
-                ", user=" + user +
                 ", illnesses=" + illnesses +
                 ", sideEffects=" + sideEffects +
+                ", favorite=" + favorite +
                 '}';
     }
 }
