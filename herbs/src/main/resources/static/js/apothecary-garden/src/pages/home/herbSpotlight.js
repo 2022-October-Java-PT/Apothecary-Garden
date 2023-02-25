@@ -10,7 +10,7 @@ import ginkgo from '../../assests/images/ginkgo.jpg';
 import licorice from '../../assests/images/licorice.jpg';
 import paopereira from '../../assests/images/paopereira.jpg';
 import papayaLeaf from '../../assests/images/papayaLeaf.jpg';
-import resceratrol from '../../assests/images/resceratrol.jpg';
+import resceratrol from '../../assests/images/resveratrol.jpg';
 import rooibosTea from '../../assests/images/rooibosTea.jpg';
 import style from './style.module.scss';
 import teaTreeOil from '../../assests/images/teaTreeOil.jpg';
