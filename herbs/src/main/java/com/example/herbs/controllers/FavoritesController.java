@@ -27,13 +27,14 @@ public class FavoritesController {
     private HerbsRepo herbsRepo;
 
     @PostMapping("/api/{userName}/add-user-favorites")
-    public Favorites createUserFavorites(@PathVariable String userName, @RequestBody String body){
-        JSONObject newFavorites = new JSONObject(body);
-        String favoritesUser = newFavorites.getString("appUser");
-        String favoriteHerbs = newFavorites.getString("favorites");
+    public Favorites createUserFavorites(@PathVariable String userName){
+//        JSONObject newFavorites = new JSONObject(body);
+//        String favoritesUser = newFavorites.getString("appUser");
+//        String favoriteHerbs = newFavorites.getString("favorites");
         AppUser user = userRepo.findByUserNameIgnoreCase(userName).get();
         Favorites favoriteToAdd = new Favorites(user);
         favoritesRepo.save(favoriteToAdd);
+        userRepo.save(userRepo.findByUserNameIgnoreCase(userName).get());
         return favoritesRepo.findByAppUser(userRepo.findByUserNameIgnoreCase(userName).get()).get();
     }
 
@@ -48,6 +49,7 @@ public class FavoritesController {
 //        Optional<Favorites> favoriteHerbsToRemoveOpt = favoritesRepo.findById(id);
 //        favoriteHerbsToRemoveOpt.ifPresent(Favorite -> favoritesRepo.deleteById(id));
 //        Optional<AppUser> user = userRepo.findByUserNameIgnoreCase(userName);
+        favoritesRepo.save(favoritesRepo.findByAppUser(userRepo.findByUserNameIgnoreCase(userName).get()).get());
         return favoritesRepo.findByAppUser(userRepo.findByUserNameIgnoreCase(userName).get()).get();
 
     }
@@ -66,7 +68,7 @@ public class FavoritesController {
 //        Optional<Favorites> favoritesHerbToEdit  = favoritesRepo.findById(id);
 //        favoritesHerbToEdit.get().changeFavoriteHerb(favoriteHerb);
 //        Herbs herbsToAdd = user.getUserFavorites();
-//        FavoritesRepo.save(favoritesHerbToEdit.get());
+        favoritesRepo.save(favoritesRepo.findByAppUser(userRepo.findByUserNameIgnoreCase(userName).get()).get());
         return favoritesRepo.findByAppUser(userRepo.findByUserNameIgnoreCase(userName).get()).get();
     }
 
