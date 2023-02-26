@@ -10,7 +10,7 @@ import ginkgo from '../../assests/images/ginkgo.jpg';
 import licorice from '../../assests/images/licorice.jpg';
 import paopereira from '../../assests/images/paopereira.jpg';
 import papayaLeaf from '../../assests/images/papayaLeaf.jpg';
-import resceratrol from '../../assests/images/resveratrol.jpg';
+import resveratrol from '../../assests/images/resveratrol.jpg';
 import rooibosTea from '../../assests/images/rooibosTea.jpg';
 import style from './style.module.scss';
 import teaTreeOil from '../../assests/images/teaTreeOil.jpg';
@@ -54,7 +54,7 @@ export default class HerbSpotlight extends React.Component {
         let description = this.state.description;
         let fact = this.state.fact;
         let picture = this.state.picture;
-        let imgList = [aloevera, ahcc, alphaLipiocicAcid, chamomile, echinacea, elderBerry, folate, ginkgo, licorice, paopereira, papayaLeaf, resceratrol, rooibosTea, teaTreeOil, turmeric, valerian, willowBark];
+        let imgList = [aloevera, ahcc, alphaLipiocicAcid, chamomile, echinacea, elderBerry, folate, ginkgo, licorice, paopereira, papayaLeaf, resveratrol, rooibosTea, teaTreeOil, turmeric, valerian, willowBark];
 
         function imageReturn(array, requiredImage) {
             let returnedImage;

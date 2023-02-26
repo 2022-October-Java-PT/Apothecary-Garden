@@ -3,54 +3,26 @@ html{
 }
 
 .container {
-    background-color: #0f0f0ff1;
-    color: white;
+    border-radius: 10px;
+    color: rgb(247, 244, 244);
     text-shadow: 1px 1px 2px black;
     margin: 50px 85px;
     border-radius: 25px;
     padding: 10px;
     font-family: 'gg sans', sans-serif;
 
-    nav{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #2bc7a5;
-        border-radius: 25px;
-        // position: sticky;
-        top: 0;
-        
-    }
-
-    nav ul {
-        display: flex;
-        list-style: none;
-        margin: 20px 0px;
-        gap: 24px;
-    }
-
-    nav ul li {
-        font-family: 'gg sans', sans-serif;
-        font-size: 1.1rem;
-        font-weight: bold;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: white;
-        padding: 8px 25px;
-        transition: all .5s ease;
-    }
-
-    nav ul li a:hover {
-        background-color: white;
-        color: black;
-        box-shadow: 0 0 10px white;
-        border-radius: 25px;
+    h1{
+        font-size: 36px;
+        padding-top: 30px;
     }
 
     h4{
-        font-size: 26px;
+        font-size: 28px;
+    }
+
+    p{
+        color: #5ac7a3f8;
+        font-size: 22px;
     }
 }
 
@@ -65,38 +37,34 @@ html{
 
 .box {
     display: flex;
-    flex-direction: column;
-    width: 550px;
-    height: 750px;
-    border: 1px solid black;
-    margin: 10px;
+    flex-direction: row;
+    max-width: 1700px;
+    max-height: 900px;
+    border: 5px solid rgba(0, 0, 0, 0.829);
+    // border-radius: 10px;
+    // margin: 10px;
     align-items: center;
-    text-align: justify;
+    text-align: right;
     padding: 10px;
-    border-radius: 15px;
-    background: linear-gradient(to top, #555, 50%, white 50%);
+    background:  #555555e1;
     background-size: 100% 200%;
     transition: all .8s;
 
     img {
-        width: 200px;
-        height: 200px;
-        background-color: white;
+        width: 400px;
+        height: 800px;
+        max-width: 1000px;
+        max-height: 600px;
+        background-color: rgb(124, 119, 119);
         padding: 5px;
         border-radius: 25px;
     }
 }
 
-.box:hover {
-    background-position: left bottom;
-    color: white;
-    border: none;
-    box-shadow: 0 0 20px #555;
-}
 
 .storingHerbs{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
 
@@ -104,4 +72,21 @@ html{
 
 .heading {
     text-align: center;
+}
+
+.tools{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img{
+        width: 400px;
+        height: 600px;
+        max-width: 1000px;
+        max-height: 900px;
+        background-color: rgb(124,119,119);
+        padding: 5px;
+        border-radius: 25px;
+    }
 }
