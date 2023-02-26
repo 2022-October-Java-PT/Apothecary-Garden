@@ -28,3 +28,56 @@
 .link{
     color: rgb(139, 179, 255);
 }
+.letterFilter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.letterSearch_Header{
+    color: white;
+    text-decoration: underline;
+}
+.letterSearch{
+    display: flex;
+    justify-content: space-around;
+}
+.letterChoice{
+    width: 50px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    border: none;
+    border-radius: 20px;
+    background: rgb(145, 145, 145);
+    border:solid 2px black;
+    outline: none;
+    margin-top: 1rem;
+}
+.illnessChoice{
+    width: auto;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 19px;
+    border: none;
+    border-radius: 20px;
+    background: rgb(145, 145, 145);
+    border:solid 2px black;
+    outline: none;
+    margin-top: 1rem;
+}
+.displayIllness{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 2rem;
+}
+// .herb_section{
+//     width: auto;
+//     color: #000;
+//     font-size: 12px;
+//     padding: 12px 19px;
+//     border: none;
+//     border-radius: 20px;
+//     background: rgb(145, 145, 145);
+//     border:solid 2px black;
+//     outline: none;
+// }

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React from 'react';
 import ahcc from '../../assests/images/ahcc.jpg';
 import aloevera from '../../assests/images/aloevera.jpg';
@@ -19,8 +19,10 @@ import turmeric from '../../assests/images/turmeric.jpg';
 import valerian from '../../assests/images/valerian.jpg';
 import willowBark from '../../assests/images/willowBark.jpg';
 
-const Herb = ({name, science, description, fact, sideEffects, picture}) => {
+export default function Herb({ name, science, description, fact, sideEffects, picture }) {
+
     let imgList = [aloevera, ahcc, alphaLipiocicAcid, chamomile, echinacea, elderBerry, folate, ginkgo, licorice, paopereira, papayaLeaf, resceratrol, rooibosTea, teaTreeOil, turmeric, valerian, willowBark];
+
     function imageReturn(array, requiredImage) {
         let returnedImage;
         array.forEach(element => {
@@ -30,16 +32,19 @@ const Herb = ({name, science, description, fact, sideEffects, picture}) => {
         });
         return returnedImage;
     }
+
     const sideEffectList = sideEffects.map((effect) => 
         <li>{effect}</li>
     );
+
     return (
         <div className={style.images}>
+            <img className={style.herb_image} src={imageReturn(imgList, picture)} alt='' ></img>
             <h1 className={style.name}>{name}</h1>
             <section className={style.description}>
                 <h2>Description</h2>
                 <p>{description}</p>
-                <img className={style.herb_image} src={imageReturn(imgList, picture)} alt='' ></img>
+               
             </section>
             <section className={style.expanded_details}>
                 <h2>Side Effects</h2>
@@ -53,14 +58,4 @@ const Herb = ({name, science, description, fact, sideEffects, picture}) => {
             </section>
         </div>
     );
-};
-
-Herb.propTypes = {
-    name: PropTypes.string,
-    science: PropTypes.string,
-    description: PropTypes.string,
-    fact: PropTypes.string,
-    
-};
-
-export default Herb;
+}
