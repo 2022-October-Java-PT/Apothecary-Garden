@@ -15,7 +15,7 @@ public class AppUser {
     private String userName;
     private String userPassword;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Favorites userFavorites;
 
     public Long getId() {
