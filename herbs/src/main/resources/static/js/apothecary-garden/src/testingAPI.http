@@ -1,0 +1,16 @@
+###
+POST http://localhost:8080/api/John%20Smith/add-user-favorites 
+###
+GET http://localhost:8080/api/herbs/herbSpotlight
+###
+PUT http://localhost:8080/api/John%20Smith/favorites/41/edit-favorite-herb
+###
+PUT http://localhost:8080/api/John%20Smith/favorites/40/edit-favorite-herb
+###
+PUT http://localhost:8080/api/John%20Smith/favorites/39/edit-favorite-herb
+###
+GET http://localhost:8080/api/user/John%20Smith 
+###
+DELETE http://localhost:8080/api/John%20Smith/favorites/39/delete-favorite-herbs 
+###
+PUT http://localhost:8080/api/washburne/favorites/41/edit-favorite-herb

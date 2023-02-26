@@ -18,6 +18,10 @@ const Signup = (props) => {
             props.history.push('/portal');
         });
 
+        Axios.post(`http://localhost:8080/api/${username}/add-user-favorites`, userData).then((response) => {
+            
+        });
+
         window.location.href='/portal';
     }
 
