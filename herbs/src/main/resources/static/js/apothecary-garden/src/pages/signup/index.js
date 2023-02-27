@@ -15,13 +15,13 @@ const Signup = (props) => {
 
         Axios.post('http://localhost:8080/api/user/new-user', userData).then((response) => {
             setUsernameSession(username);
-            props.history.push('/portal');
+            props.history.push('/favorites');
         });
 
         Axios.post(`http://localhost:8080/api/${username}/add-user-favorites`, userData).then((response) => {
             
         });
-
+        
         window.location.href='/portal';
     }
 

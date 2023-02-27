@@ -22,9 +22,11 @@ export default function FavoriteButton({ herbName, id }) {
         if (isUserLoggedIn() === true) {
             try {
                 const favHerbData = await axios.get(`http://localhost:8080/api/${loggedInUser}/favorites/${herbName}`);
-                console.log(favHerbData.data);
-                if (favHerbData !== null) {
-                    setButtonText('Favorite');
+                console.log(favHerbData);
+                if (favHerbData.data === "") {
+                    setButtonText('Not Favorite');
+                } else {
+                    setButtonText('Favorited');
                 }
             } catch (error) {
                 console.log(error);
@@ -33,56 +35,45 @@ export default function FavoriteButton({ herbName, id }) {
     }
 
 
-    
-    // async function fetchFavHerb() {
-    //     const favHerb = await axios.get(`http://localhost:8080/api/${loggedInUser}/favorites/${herbName}`);
-    //     console.log(favHerb.data);
-    //     return favHerb.data;
-    // }
-
-    
-    
-    const handleClick  = () => {
-        console.log('clicked!');     
-        if (isUserLoggedIn() === false) {
-            alert('Please log in to add to bookmarks');
-        } else {
-            const fetchFavHerb = async () => {
-                const favHerb = await axios.get(`http://localhost:8080/api/${loggedInUser}/favorites/${herbName}`);
-                console.log(favHerb.data);
-            }
-            const favHerbToAdd = fetchFavHerb();
-            const favHerbData = {
-                favorites: favHerbToAdd
-            };
-            
-            if (buttonText === 'Not Favorite') {
-                const addFavorite = async (favHerbData) => {
-                    try {
-                        const response = await axios.put(`http://localhost:8080/api/${loggedInUser}/favorites/${id}/edit-favorite-herb`, favHerbData)
-                        console.log(response.data);
-                    } catch (error) {
-                        console.log(error);
-                    }
-                };
-                setButtonText('Favorited');
-                addFavorite(favHerbData);
-                alert('This herb has been added to your bookmarks');
-            } else {
-                const deleteFavorite = async (favHerbData) => {
-                    try {
-                        const response = await axios.delete(`http://localhost:8080/api/${loggedInUser}/favorites/${id}/delete-favorite-herbs`, favHerbData);
-                        console.log(response.data);
-                    } catch (error) {
-                        console.log(error);
-                    }
-                };
-                deleteFavorite(favHerbData);
-                setButtonText('Not Favorite');
-                alert('This herb has been added to your bookmarks');
-            }
+    const fetchFavHerb = async () => {
+        try {
+          const favHerb = await axios.get(`http://localhost:8080/api/${loggedInUser}/favorites/${herbName}`);
+          return favHerb.data;
+        } catch (error) {
+          console.log(error);
+          return null;
         }
-    }
+      };
+
+    const handleClick = async () => {
+        console.log('clicked!');
+        if (!isUserLoggedIn()) {
+          alert('Please log in to add to bookmarks');
+          return;
+        }
+        const favHerbData = {
+          favorites: await fetchFavHerb()
+        };
+        if (buttonText === 'Not Favorite') {
+          try {
+            await axios.put(`http://localhost:8080/api/${loggedInUser}/favorites/${id}/edit-favorite-herb`, favHerbData);
+            setButtonText('Favorited');
+            alert('This herb has been added to your bookmarks');
+          } catch (error) {
+            console.log(error);
+          }
+        } else {
+          try {
+            await axios.delete(`http://localhost:8080/api/${loggedInUser}/favorites/${id}/delete-favorite-herbs`, { data: favHerbData });
+            setButtonText('Not Favorite');
+            alert('This herb has been removed from your bookmarks');
+          } catch (error) {
+            console.log(error);
+          }
+        }
+      };
+
+
     setInitialButtonState();
     
     //(Button will be heart icon or bookmark icon filled for favorite or empty for not favorite)
