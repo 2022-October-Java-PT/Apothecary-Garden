@@ -2,15 +2,13 @@
 // import React from 'react';
 // import { isUserLoggedIn } from '../components/favorite_button/index.js'
 // import style from './style.module.scss';
-// //is isUserLoggedIn a function in another file? Redundant function?
-
 
 // const MyApothecaryPage = () => {
    
-//     // if (isUserLoggedIn() === true) {
-//     //     //RETRIEVE THE USER'S FAVORITES FROM THE DATABASE
-//     //     <FavoritesList />
-//     // } else {
+//     if (isUserLoggedIn() === true) {
+//         //RETRIEVE THE USER'S FAVORITES FROM THE DATABASE
+//         <FavoritesList />
+//     } else {
 //         return (
 //             <div className={style.container}>
 //                 <h2>BOOKMARKED HERBS</h2>

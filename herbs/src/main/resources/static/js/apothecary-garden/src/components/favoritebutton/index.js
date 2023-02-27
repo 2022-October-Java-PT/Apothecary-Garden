@@ -10,7 +10,6 @@ export default function FavoriteButton({ herbName, id }) {
     const loggedInUser = getUsername();
 
     function isUserLoggedIn() {
-        // const userName = getUsername();
         console.log("GET USER NAME", loggedInUser);
         if (loggedInUser != null) {
             return true;
@@ -19,49 +18,56 @@ export default function FavoriteButton({ herbName, id }) {
         }
     }     
     
-    async function setInitialButtonState() {
+    const setInitialButtonState = async () => {
         if (isUserLoggedIn() === true) {
-            const favHerbData = await fetchFavHerb();
-            if (favHerbData !== null) {
-                setButtonText('Favorite');
-            }
+            try {
+                const favHerbData = await axios.get(`http://localhost:8080/api/${loggedInUser}/favorites/${herbName}`);
+                console.log(favHerbData.data);
+                if (favHerbData !== null) {
+                    setButtonText('Favorite');
+                }
+            } catch (error) {
+                console.log(error);
+            } 
         }
     }
+
+
     
-    async function fetchFavHerb() {
-        const favHerb = await axios.get(`http://localhost:8080/api/${loggedInUser}/favorites/${herbName}`);
-        console.log(favHerb.data);
-        return favHerb.data;
-    }
+    // async function fetchFavHerb() {
+    //     const favHerb = await axios.get(`http://localhost:8080/api/${loggedInUser}/favorites/${herbName}`);
+    //     console.log(favHerb.data);
+    //     return favHerb.data;
+    // }
+
     
-    function handleClick() {
+    
+    const handleClick  = () => {
         console.log('clicked!');     
         if (isUserLoggedIn() === false) {
             alert('Please log in to add to bookmarks');
         } else {
-            const favHerb = fetchFavHerb();
+            const fetchFavHerb = async () => {
+                const favHerb = await axios.get(`http://localhost:8080/api/${loggedInUser}/favorites/${herbName}`);
+                console.log(favHerb.data);
+            }
+            const favHerbToAdd = fetchFavHerb();
             const favHerbData = {
-                favorites: favHerb
+                favorites: favHerbToAdd
             };
             
             if (buttonText === 'Not Favorite') {
                 const addFavorite = async (favHerbData) => {
                     try {
-                        const response = await axios.put(`http://localhost:8080/api/${loggedInUser}/favorites/${id}/edit-favorite-herb`, favHerbData).then((response) => {
-                            console.log(response);
-                            console.log(response.data);
-                    }, catch (error) {
+                        const response = await axios.put(`http://localhost:8080/api/${loggedInUser}/favorites/${id}/edit-favorite-herb`, favHerbData)
+                        console.log(response.data);
+                    } catch (error) {
                         console.log(error);
-                    }
                     }
                 };
                 setButtonText('Favorited');
                 addFavorite(favHerbData);
-                return (
-                    <div>
-                        <h3>This herb has been added to your bookmarks</h3>
-                    </div>
-                );
+                alert('This herb has been added to your bookmarks');
             } else {
                 const deleteFavorite = async (favHerbData) => {
                     try {
@@ -72,11 +78,8 @@ export default function FavoriteButton({ herbName, id }) {
                     }
                 };
                 deleteFavorite(favHerbData);
-                return (
-                    <div>
-                        <h3>This herb has been removed from your bookmarks</h3>
-                    </div>
-                );
+                setButtonText('Not Favorite');
+                alert('This herb has been added to your bookmarks');
             }
         }
     }
