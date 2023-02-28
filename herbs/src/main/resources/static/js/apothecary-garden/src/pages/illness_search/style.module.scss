@@ -4,13 +4,20 @@
 }
 
 .ailmentSearchPage{
+    border-radius: 10px;
+    color: rgb(247, 244, 244);
+    text-shadow: 1px 1px 2px black;
+    margin: 50px 55px;
+    border-radius: 25px;
+    // padding: 10px;
+    font-family: 'gg sans', sans-serif;
     background: #333333b7;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem auto;
     min-height: 400px;
-    border-top: #000 solid 5px;
-    max-width: 90%;
-    margin: auto;
+    // border-top: #000 solid 5px;
+    // max-width: 90%;
+    // margin: auto;
 }
 
 // .returnedHerbs{
@@ -48,10 +55,13 @@
     color: white;
     // text-decoration: underline;
     font-size: 2rem;
+    margin: 16px 0;
+    padding: 0 12px;
 }
 .letterSearch{
     display: flex;
     flex-wrap: wrap;
+    padding: 0 1rem;
 }
 .letterChoice{
     width: 50px;
@@ -106,4 +116,64 @@
 
 .noneFound{
     color: white;
+}
+
+@media (max-width: 768px) {
+    .ailmentSearchPage{
+        margin: 20px;
+        padding: 5px;
+    }
+
+    .letterSearch_Header{
+        color: white;
+        // text-decoration: underline;
+        font-size: 1.5rem;
+        margin: 16px 0;
+        padding: 0 12px;
+    }
+    .letterSearch{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 .75rem;
+    }
+    .letterChoice{
+        width: 50px;
+        color: white;
+        font-size: 10px;
+        padding: 3px 0;
+        border: none;
+        border-radius: 4px;
+        background: darkolivegreen;
+        border:solid 2px black;
+        outline: none;
+        margin-top: .25rem;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .illnessChoice{
+        width: 150px;
+        color: white;
+        font-size: 10px;
+        padding: 3px 3px;
+        border: none;
+        border-radius: 4px;
+        background: darkolivegreen;
+        border:solid 2px black;
+        outline: none;
+        margin-top: .25rem;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .displayIllness{
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0 2rem;
+    }
+    
+    .herbsList{
+        text-shadow: 1px 1px 2px black;
+        // font-size: 3rem;
+    }
 }
