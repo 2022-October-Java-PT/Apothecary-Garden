@@ -36,7 +36,7 @@ const ContactPage = () => {
                     <img src={profileWolf} className={style.profile_img} alt="profile pic wolfgang">
                     </img> 
                     <p className={style.position_title}>DEVELOPER</p>
-                    <p className={style.personal_description}>Wolf is a current Student at WCCI pursuing a career in software development.</p>
+                    <p className={style.personal_description}>Wolf is a current Student at WCCI pursuing a career in software development. I'm a fabricator transitioning into a Software Development role after completing We Can Code IT Bootcamp. Hands-on project experience building both the front-end and back-end of web apps using Node.js, React.js, ASP.NET, and other frameworks.</p>
                     <a href='https://github.com/WolfgangA1'><img src={github} alt='Github Logo'></img></a>
                     <a href='https://www.linkedin.com/in/wolfgang-ashcraft/'><img src={linkedIn} alt='LinkedIn Logo'></img></a>
                 </article>
