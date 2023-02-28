@@ -33,9 +33,9 @@ function IllnessList() {
   };
 
   return (
-    <>
+    <div className={style.ailmentSearchPage}>
       <div className={style.letterFilter}>
-        <h3 className={style.letterSearch_Header}>Start your search, select the starting letter of your ailment</h3>
+        <h3 className={style.letterSearch_Header}>Select the starting letter of your ailment</h3>
         <section className={style.letterSearch}>
         {Array.from(Array(26)).map((_, i) => (
           <button className={style.letterChoice} key={i} onClick={() => handleLetterClick(String.fromCharCode(65 + i))}>
@@ -45,12 +45,12 @@ function IllnessList() {
         </section>
       </div>
       <div className={style.displayIllness}>
-        {noData && <p>No data available for this letter</p>}
+        {noData && <p className={style.noneFound}>No data available for this letter</p>}
         {illnesses.map((illness) => (
           <button className={style.illnessChoice} onClick={() => herbList(illness.name)} key={illness.id}>{illness.name}</button>
         ))}
       </div>
-      <div>
+      <div className={style.herbsList}>
         {herbs.map((herb) => (
             <a className={style.herbChoice} key={herb.id} href={`herbs/${herb.name}`}>
                 <div className={style.herb_section}>
@@ -59,7 +59,7 @@ function IllnessList() {
             </a>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

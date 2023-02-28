@@ -44,7 +44,7 @@ public class Populator implements CommandLineRunner {
         Illness hepatitis = new Illness("Hepatitis");
         Illness pepticUlcers = new Illness("Peptic Ulcers");
         Illness bronchitis = new Illness("Bronchitis");
-        Illness insomnia = new Illness("Insomnia (trouble falling asleep, staying asleep, or waking up too early)");
+        Illness insomnia = new Illness("Insomnia");
         Illness diarrhea = new Illness("Diarrhea");
         Illness muscleSpasms = new Illness("Muscle Spasms");
         Illness menopausalSymptoms = new Illness("Menopausal Symptoms");
