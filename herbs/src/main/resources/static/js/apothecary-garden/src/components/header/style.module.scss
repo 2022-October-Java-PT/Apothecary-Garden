@@ -1,89 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:wght@100;300;400;500&family=Rubik+Moonrocks&display=swap');
 
-.header {
-  padding: 15px 25px;
-  list-style: none;
-  display: flex;
-  margin-left: 60px;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 50%;
-  border-radius: 25px;
- 
-  ;
-  & h1 {
-    // font-family: 'Roman', cursive;
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.7rem;
-    color: #fff;
-    margin-left: -30%;
-    
-  }
+// .header {
+//   padding: 15px 25px;
+//   list-style: none;
+//   display: flex;
+//   margin-left: 60px;
+//   justify-content: space-between;
+//   margin: 0 auto;
+//   width: 50%;
+//   border-radius: 25px;
   
-}
-
-.navList {
-  display: flex;
+//   ;
+//   & h1 {
+    
+//     font-family: 'Roboto', sans-serif;
+//     font-size: 2.7rem;
+//     color: #fff;
+//     margin-left: -30%;
+    
+//   }
   
+// }
 
+// .navList {
+//   display: flex;
 
-  & a {
+//   & a {
 
-    list-style: none;
-    display: inline-block;
-    margin-left: 60px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif;
-    // align-items: center;
-    // border: 1px solid black;
+//     list-style: none;
+//     display: inline-block;
+//     margin-left: 60px;
+//     text-decoration: none;
+//     color: #fff;
+//     font-size: 15px;
+//     font-family: 'Roboto', sans-serif;
     
-    // display: flex;
-    // justify-content: center;
-    // list-style-type: none;
-    // margin: 0 15px;
-    // min-width: 70px;
-    // height: 80px;
-    // padding: 5px;
-    // text-decoration: none;
-    // background-color: white;
-    // color: black;
-    // font-family: 'Concert One', cursive;
-    // font-size: 1rem;
-    // border-radius: 15px;
-   
-  }
+//   }
 
-  & a:hover {
-    // background-color: #89dba2;
-    color: white;
-    transition: .5s;
+//   & a:hover {
     
-  }
-
- 
-  
-};
-
-.login{
-  display: flex;
-
-  & a {
-
-    list-style: none;
-    display: inline-block;
-    margin-left: 60px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  & a:hover {
-    background-color: #89dba2;
-    color: white;
-    transition: .5s;
+//     color: white;
+//     transition: .5s;
     
-  }
-}
+//   }
+// };
+
+// .login{
+//   display: flex;
+
+//   & a {
+
+//     list-style: none;
+//     display: inline-block;
+//     margin-left: 60px;
+//     text-decoration: none;
+//     color: #fff;
+//     font-size: 15px;
+//     font-family: 'Roboto', sans-serif;
+//   }
+
+//   & a:hover {
+//     background-color: #89dba2;
+//     color: white;
+//     transition: .5s;
+    
+//   }
+// }
