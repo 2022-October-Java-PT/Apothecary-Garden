@@ -36,7 +36,7 @@ let user = getUsername();function Navbar() {
           <a href="/contact">Contact</a>
         </li>
         {!user ? 
-            <div>
+            <div className={style.navbarNav}>
             <li className={style.navItem}>
             <NavLink to='/signup'>Sign Up</NavLink>
             </li>
@@ -61,6 +61,3 @@ let user = getUsername();function Navbar() {
 }
 
 export default Navbar;
-
-
-
