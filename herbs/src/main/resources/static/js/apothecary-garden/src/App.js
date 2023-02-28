@@ -1,15 +1,15 @@
-import PageSwitch from './components/app-router';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import style from './style.module.scss';
-import Header from './components/header';
+import { BrowserRouter } from 'react-router-dom';
 import Footer from './components/footer';
+import NavBar from './components/navBar/NavBar'
+import PageSwitch from './components/app-router';
 import React from 'react';
+import style from './style.module.scss';
 
 const App = () => {
 
   return (
     <BrowserRouter>
-      <Header className={style.header}/>
+    <NavBar />
       <div className={style.page}>
         <PageSwitch />
       </div>
