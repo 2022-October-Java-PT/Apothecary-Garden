@@ -22,7 +22,7 @@ const Signup = (props) => {
             
         });
         
-        window.location.href='/portal';
+        window.location.href='/favorites';
     }
 
     const [username, setUsername] = useState('');

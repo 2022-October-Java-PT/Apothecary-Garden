@@ -11,6 +11,7 @@
 .navbarLogo {
     font-size: 2.7rem;
     position: sticky;
+    text-shadow: 1px 1px 2px black;
 }
 
 .navbarLogo a {
@@ -32,6 +33,33 @@
     padding: 0;
     transition: all 0.5s ease-in-out;
 }
+.loggedIn{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 1px 1px 2px black;
+}
+.loggedIn p{
+    color: white;
+    font-size: 1.25rem; 
+    text-align: center;
+}
+.loggedIn button{
+    padding: 2px;
+    background: darkolivegreen;
+    border-radius: 10px;
+    border: white 2px solid;
+    margin: 0;
+    height: auto;
+    max-width: 100px;
+    &:hover{
+        text-decoration: underline white;
+    }
+}
 
 .navbarNav.active {
     position: absolute;
@@ -45,6 +73,10 @@
 
 .navItem{
     margin: 10px;
+    text-align: center;
+    border: 2px white solid;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px black;
 }
 
 .navItem a{

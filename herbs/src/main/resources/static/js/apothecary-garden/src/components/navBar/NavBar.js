@@ -45,8 +45,8 @@ let user = getUsername();function Navbar() {
             </li>
             </div>
             :
-            <div>
-            <p className={style.display_username}>Hello {user}</p>
+            <div className={style.loggedIn}>
+            <p className={style.display_username}>Hello, {user}!</p>
             <button className={style.logout} onClick={() => logout()}><p>Sign Out</p></button>
             </div>
             }
