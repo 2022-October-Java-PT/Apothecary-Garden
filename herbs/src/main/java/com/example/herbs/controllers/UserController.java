@@ -1,7 +1,9 @@
 package com.example.herbs.controllers;
 
 import com.example.herbs.models.AppUser;
+import com.example.herbs.models.Favorites;
 import com.example.herbs.models.Herbs;
+import com.example.herbs.repositories.FavoritesRepo;
 import com.example.herbs.repositories.HerbsRepo;
 import com.example.herbs.repositories.UserRepo;
 import org.json.JSONException;
@@ -21,6 +23,9 @@ public class UserController {
 
     @Resource
     private HerbsRepo herbsRepo;
+
+    @Resource
+    private FavoritesRepo favoritesRepo;
 
     @GetMapping("/api/user/{userName}")
     public Optional<AppUser> getUser(@PathVariable String userName) {
@@ -69,6 +74,10 @@ public class UserController {
     public Collection<Herbs> getAllHerbs() throws JSONException{
         return (Collection<Herbs>) herbsRepo.findAll();
     }
+
+
+
+
 
 //    @GetMapping("/api/{userName}/herbs")
 //    public Collection<Herbs> getHerbs(@PathVariable String userName){

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:wght@100;300;400;500&family=Rubik+Moonrocks&display=swap');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.navbarLogo {
+    font-size: 2.7rem;
+    position: sticky;
+    text-shadow: 1px 1px 2px black;
+}
+
+.navbarLogo a {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+
+    margin-left: 60px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbarNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+}
+.loggedIn{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 1px 1px 2px black;
+}
+.loggedIn p{
+    color: white;
+    font-size: 1.25rem; 
+    text-align: center;
+}
+.loggedIn button{
+    padding: 2px;
+    background: darkolivegreen;
+    border-radius: 10px;
+    border: white 2px solid;
+    margin: 0;
+    height: auto;
+    max-width: 100px;
+    &:hover{
+        text-decoration: underline white;
+    }
+}
+
+.navbarNav.active {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    background-color: #181717f8;
+    padding: 20px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navItem{
+    margin: 10px;
+    text-align: center;
+    border: 2px white solid;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.navItem a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.navbarToggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+}
+
+.navbarToggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        padding-left: 0px;
+    }
+    .navbarNav {
+        position: fixed;
+        top: 45px;
+        left: -100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease-in-out;
+    }
+    .navbarLogo a{
+        margin: 0px;
+        justify-self: left;
+    }
+
+    .navbarNav.active {
+        left: 0;
+    }
+
+    .navbarToggle {
+        display: flex;
+    }
+}

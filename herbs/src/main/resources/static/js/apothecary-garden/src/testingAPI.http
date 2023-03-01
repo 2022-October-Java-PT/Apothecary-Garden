@@ -14,3 +14,15 @@ GET http://localhost:8080/api/user/John%20Smith
 DELETE http://localhost:8080/api/John%20Smith/favorites/39/delete-favorite-herbs 
 ###
 PUT http://localhost:8080/api/washburne/favorites/41/edit-favorite-herb
+###
+GET http://localhost:8080/api/John%20Smith/favorites/
+###
+GET http://localhost:8080/api/John%20Smith/favorites/Pao%20pereira
+###
+GET http://localhost:8080/api/washburne/favorites/
+###
+GET http://localhost:8080/api/user/washburne
+###
+PUT http://localhost:8080/api/campbene/favorites/39/edit-favorite-herb
+###
+POST http://localhost:8080/api/campbene/add-user-favorites 

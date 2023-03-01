@@ -17,7 +17,7 @@ const Login = (props) => {
             const result = await Axios(`http://localhost:8080/api/user/${userName}`);
             console.log(result.data);
             setUsernameSession(result.data.userName);
-            props.history.push('/portal');
+            props.history.push('/favorites');
         }
 
         fetchData();
@@ -28,8 +28,8 @@ const Login = (props) => {
     return (
         <div className={style.loginPage}>
             
-            <section className={style.loginTwo}>
-                <h2 className={style.loginH2}>Login To Your Account</h2>
+            <section className={style.login_section}>
+                <h2 className={style.login_header}>Login To Your Account</h2>
                 <form className={style.loginForm} onSubmit={handleSubmit}>
                     <input className={style.loginText} 
                         type='text' 
@@ -47,12 +47,12 @@ const Login = (props) => {
                         onFocus={(e) => e.target.placeholder = ""}
                         onBlur={(e) => e.target.placeholder = "Password"}
                     />
-                    <button className={style.loginSubmit} onClick={() => (window.location.href='/portal')} type="submit">Login With Username</button>
+                    <button className={style.loginSubmit} onClick={() => (window.location.href='/favorites')} type="submit">Login</button>
                 </form>
-
+{/* 
                 <div className={style.loginLine}>Or</div>
                 <button className={style.loginFace} type="submit">Login With Facebook</button>
-                <button className={style.loginGoogle} type="submit">Login With Google</button>
+                <button className={style.loginGoogle} type="submit">Login With Google</button> */}
             </section>
 
             <section className={style.loginOne}>
