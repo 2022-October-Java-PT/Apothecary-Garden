@@ -50,8 +50,8 @@ const ContactPage = () => {
                     </img>
                     <p className={style.position_title}>DEVELOPER</p>
                     <p className={style.personal_description}>Dom is a former Service Delivery Coordinator transitioning into a Software Development role after completing We Can Code IT Bootcamp. Hands-on project experience building both the front-end and back-end of web apps using JavaScript,Node.js, React.js, Spring Boot, SQL and other frameworks.</p>
-                    <a href='https://github.com/WolfgangA1'><img src={github} alt='Github Logo'></img></a>
-                    <a href='https://github.com/WolfgangA1'><img src={linkedIn} alt='LinkedIn Logo'></img></a>
+                    <a href='https://github.com/Dhawkins777'><img src={github} alt='Github Logo'></img></a>
+                    <a href='https://www.linkedin.com/in/dominique-hawkins-565346259/'><img src={linkedIn} alt='LinkedIn Logo'></img></a>
                 </article>
                 <article className={style.profile_column}>
                     <h2 className={style.profile_name}>NUHAMIN TESFAYE</h2>
