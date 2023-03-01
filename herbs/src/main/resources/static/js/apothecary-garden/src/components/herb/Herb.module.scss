@@ -83,3 +83,104 @@
 .link:hover {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+    .herb_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem 0;
+        padding: 1rem;
+    }
+
+    .name_button_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .herb_name {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .favorite_button {
+        margin-bottom: 0.5rem;
+    }
+
+    .image_data_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .herb_image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    .right_container {
+        width: 100%;
+    }
+
+    .description_container {
+        margin-bottom: 0.5rem;
+    }
+
+    .description_heading {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sideEffectList_container {
+        margin-bottom: 0.5rem;
+    }
+
+    .sideEffects_listTitle {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sideEffects_list {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sideEffects_item {
+        margin-left: 0.5rem;
+    }
+
+    .funFact_container {
+        margin-bottom: 0.5rem;
+    }
+
+    .funFact_title {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .funFact {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .researchLink_container {
+        margin-bottom: 0.5rem;
+    }
+
+    .researchLink {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+}

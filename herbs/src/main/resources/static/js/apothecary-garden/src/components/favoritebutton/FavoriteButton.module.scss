@@ -68,3 +68,10 @@
     font-size: 0.75rem;
     white-space: nowrap;
 }
+
+@media (max-width: 768px) {
+    .fav_button {
+        font-size: 1.25rem;
+        padding: 0.5rem;
+    }
+}
