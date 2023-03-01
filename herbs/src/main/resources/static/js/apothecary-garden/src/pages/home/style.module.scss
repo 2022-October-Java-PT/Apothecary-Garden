@@ -24,11 +24,42 @@ body {
     text-shadow: 1px 1px 2px black;
     margin: 1rem 0;
     padding: 1rem;
-    background: #333333b7;
+    // background: #333333b7;
 
     h1{
         font-size: 2rem;
     }
+}
+.spotlight_section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50%;
+    text-align: center;
+    background: #333333b7;
+    border-radius: 20px;
+}
+div h2 a{
+    color: white;
+}
+.HerbName {
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.HerbFact {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.herb_image {
+    align-self: center;
+    max-width: 25%;
+    max-height: auto;
+    border: solid white 2px;
+    border-radius: 10px;
 }
 
 button {
@@ -105,18 +136,20 @@ button {
     transform: translateY(1px);
 }
 
-.HerbName {
-    text-decoration: underline;
-    color: white;
-    font-size: 2rem;
-}
-
-.HerbFact {
-    color: white;
-    font-size: 1.5rem;
-}
-
-.herb_image {
-    max-width: 50%;
-    max-height: 25rem;
+@media (max-width: 768px) {
+    .spotlight_section{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        text-align: center;
+        background: #333333b7;
+        border-radius: 20px;
+    }
+    .herb_image {
+        align-self: center;
+        max-width: 35%;
+        max-height: auto;
+        border: solid white 2px;
+        border-radius: 10px;
+    }
 }
