@@ -35,12 +35,12 @@ const Signup = (props) => {
 
     return (
         <div className={style.signupPage}>
-            <section className={style.signupOne}>
+            {/* <section className={style.signupOne}>
                 <h1 className={style.H1}>Placement</h1>
-            </section>
-
-            <section className={style.signupTwo}>
-                <h2 className={style.signupH2}>Sign Up</h2>
+            </section> */}
+            <section className={style.signup_section}>
+                <h2 className={style.signup_header}>Sign Up</h2>
+                <p className={style.directions}>Please enter a new username and password</p>
                 <form className={style.signupForm} onSubmit={handleSubmit}>
                     <input className={style.signupText} 
                         type='text'
@@ -61,9 +61,9 @@ const Signup = (props) => {
                     <button className={style.signupSubmit} type="submit" onClick={handleLogin}>Sign Up</button>
                 </form>
 
-                <div className={style.signupLine}>Or</div>
+                {/* <div className={style.signupLine}>Or</div>
                 <button className={style.signupFace} type="submit">Sign Up With Facebook</button>
-                <button className={style.signupGoogle} type="submit">Sign Up With Google</button>
+                <button className={style.signupGoogle} type="submit">Sign Up With Google</button> */}
             </section>
         </div>
     )

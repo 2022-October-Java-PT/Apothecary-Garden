@@ -66,10 +66,10 @@ export default class HerbSpotlight extends React.Component {
             return returnedImage;
         }
             return (
-                <div className={style.herSpotlight}>
-                    <h1 className={style.HerbName}>{name}</h1>
+                <div className={style.herbSpotlight}>
+                    <h2 className={style.HerbName}><a className={style.herblink} key={name} href={`herbs/${name}`}>{name}</a></h2>
                     <p className={style.HerbFact}>{fact}</p>
-                    <img className={style.herb_image} src={imageReturn(imgList, picture)} alt='HerbImg' ></img>
+                    <a className={style.herblink} key={name} href={`herbs/${name}`}><img className={style.herb_image} src={imageReturn(imgList, picture)} alt='HerbImg' ></img></a>
                     {/* <p className={style.HerbFact}>{description}</p> */}
                     {/* <button onClick={this.newSearch}>New Herb</button> */}
                 </div>

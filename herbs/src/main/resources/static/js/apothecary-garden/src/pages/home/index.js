@@ -9,12 +9,15 @@ const HomePage = () => {
     const [open, setOpen] = React.useState(true)
     return(
         <div className={style.homeContent}>
-            <div>
+            <div className={style.home_body}>
                 <h1>Herbal Medicine History</h1>
                 <p>Archaeological evidence indicates that the use of medicinal plants dates back to the Paleolithic age, approximately 60,000 years ago. Written evidence of herbal remedies dates back over 5,000 years to the Sumerians, who compiled lists of plants.
                 </p>
-            <HerbSpotlight />
-        </div>
+                <section className={style.spotlight_section}>
+                <h2 className={style.spotlight_header}>Herb Spotlight</h2>
+                <HerbSpotlight />
+                </section>
+            </div>
             <button className={style.disclaimer_button} onClick={() => setOpen(true)}>Disclaimer</button>
             <Disclaimer setOpen={setOpen} open={open} />
         </div>
