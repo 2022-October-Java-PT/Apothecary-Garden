@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 
 import Axios from 'axios';
-import FavoriteButton from '../../components/favoritebutton';
-import Herb from '../../components/herb';
+// import FavoriteButton from '../../components/favoritebutton/FavoriteButton';
+import Herb from '../../components/herb/Herb';
 import style from './style.module.scss';
 import { useParams } from 'react-router-dom';
 
@@ -36,9 +36,9 @@ export default function HerbPage() {
         <div className={style.content}>
             {loading ? <h3>Loading...</h3> :
                 <>
-                    <div >
+                    {/* <div >
                         <FavoriteButton herbName={herb.name} id={herb.id} />
-                    </div>
+                    </div> */}
                     <div key={herb.id}>
                         <Herb 
                             name={herb.name}

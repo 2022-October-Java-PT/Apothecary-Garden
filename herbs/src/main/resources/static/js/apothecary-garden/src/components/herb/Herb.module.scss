@@ -1,0 +1,85 @@
+.herb_container {
+    display: block;
+    border: 0.25em solid rgba(0, 0, 0, 0.829);
+    background: #333333b7;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 10px;
+    color: #fff;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-family: 'gg sans', sans-serif;
+}
+
+.name_button_container {
+    // border: 4px dotted white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.herb_name {
+    // border: 4px dotted red;
+    font-size: 3em;
+}
+
+.image_data_container {
+    display: flex;
+    // border: 4px dotted green;
+}
+
+
+.herb_image {
+    // border: 4px dotted red;
+    width: 30%;
+    height:fit-content;
+}
+
+
+.right_container {
+    // border: 4px dotted red;
+    margin-left: 5px;
+}
+
+.description_container,
+.sideEffectList_container,
+.funFact_container,
+.researchLink_container {
+    margin-bottom: 15px;
+    // border: 4px dotted blue;
+}
+
+.description_heading,.sideEffects_listTitle,
+.funFact_title {
+    font-size: 1.5rem;
+    display: inline;
+    color: rgb(173, 141, 141);
+    // border: 4px dotted red;
+}
+
+.description, .sideEffects_list, .funFact {
+    display: inline;
+    font-size: 1.25rem;
+    margin-left: 5px;
+    // border: 4px dotted green;
+}
+
+.sideEffects_item {
+    list-style: none;
+    // border: 4px dotted white;
+    font-size: 1.25rem;
+}
+
+.researchLink {
+    font-size: 1rem;
+    display: inline;
+    // border: 4px dotted red;
+}
+
+.link {
+    color: rgb(173, 141, 141);
+}
+
+.link:hover {
+    text-decoration: underline;
+}

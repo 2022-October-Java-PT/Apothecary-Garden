@@ -1,0 +1,70 @@
+.fav_button {
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    padding: 0;
+}
+
+.fav_button:focus {
+    outline: none;
+    // background-color: yellow;
+    // box-shadow: 0 0 5px blue;
+}
+
+// .fav_button svg {
+//     width: 1.5em;
+//     height: 1.5em;
+//     // border: 5px dotted white;
+//     color: white;
+// }
+
+
+// .fav_button .empty-bookmark {
+//     fill: none;
+//     stroke: #333;
+//     stroke-width: 2;
+// }
+
+// .BsFillBookmarkDashFill,
+// .BsBookmarkPlus {
+//     color: white;
+// }
+
+// .fav_button .filled-bookmark {
+//     fill: #007bff;
+//     stroke: #007bff;
+//     stroke-width: 2;
+// }
+
+
+.fav_button:hover .empty-bookmark::after {
+    content: "Add to Bookmarks";
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+
+.fav_button:hover .filled-bookmark::after {
+    content: "Remove from Bookmarks";
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
