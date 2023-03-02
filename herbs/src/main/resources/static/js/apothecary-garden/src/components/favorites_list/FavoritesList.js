@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
 
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import { getUsername } from "../../components/common";
-import style from './style.module.scss';
+import style from './FavoritesList.module.scss';
 
 const FavoritesList = () => {
     
@@ -30,20 +31,21 @@ const FavoritesList = () => {
 
     return (
         <div className={style.container}>
-            <div className={style.favorites_title}>
-                <h2>BOOKMARKED HERBS</h2>
-            </div>
+            <h2 className={style.favorites_title}>BOOKMARKED HERBS</h2>
             <div className={style.favorites_list}>
                 {loading ? <h3>Loading...</h3> : favorites.map((favorite) => (
-                    <a key={favorite.id} href={`favorites/${favorite.name}`}>
-                        <div className={style.favorites_list_item}>
-                            <h2>{favorite.name}</h2>
-                        </div>
+                    <a className={style.herb_name} key={favorite.id} href={`herbs/${favorite.name}`}>
+                        {favorite.name}
                     </a>
                 ))}
             </div>
         </div>  
     );
 }
+
+FavoritesList.propTypes = {
+    herbName: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+   };
 
 export default FavoritesList;

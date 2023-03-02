@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 
 import ContactPage from '../../pages/contact';
-import FavoritesList from '../../pages/favorites_list/FavoritesList';
+// import FavoritesList from '../../pages/favorites_list/FavoritesList';
 import HerbPage from '../../pages/herb/HerbPage'
 import Herbs from '../../pages/herbs';
 import HerbsList from '../../pages/herbs_search';
@@ -29,7 +29,7 @@ const PageSwitch = () => (
         <Route exact path='/illness_search' element={<IllnessList />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/signup' element={<Signup />} />
-        <Route exact path='/favorites' element={<FavoritesList />} />
+        {/* <Route exact path='/favorites' element={<FavoritesList />} /> */}
         <Route exact path='/portal' element={<PortalHome />} />
     </Routes>
 );

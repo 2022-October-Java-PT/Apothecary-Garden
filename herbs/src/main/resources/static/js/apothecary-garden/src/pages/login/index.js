@@ -17,7 +17,7 @@ const Login = (props) => {
             const result = await Axios(`http://localhost:8080/api/user/${userName}`);
             console.log(result.data);
             setUsernameSession(result.data.userName);
-            props.history.push('/favorites');
+            props.history.push('/myApothecary');
         }
 
         fetchData();
@@ -50,17 +50,24 @@ const Login = (props) => {
                         onFocus={(e) => e.target.placeholder = ""}
                         onBlur={(e) => e.target.placeholder = "Password"}
                     />
-                    <button className={style.loginSubmit} onClick={() => (window.location.href='/favorites')} type="submit">Login</button>
+                    <button className={style.loginSubmit} onClick={() => (window.location.href='/myApothecary')} type="submit">Login</button>
                 </form>
 {/* 
                 <div className={style.loginLine}>Or</div>
                 <button className={style.loginFace} type="submit">Login With Facebook</button>
                 <button className={style.loginGoogle} type="submit">Login With Google</button> */}
             </section>
+
+
+            <section className={style.loginOne}>
+                <h1 className={style.loginH1}>Welcome Back {getUsername()} We're Glad You're Here.</h1>
+            </section>
+
             <section className={style.toSignup}>
                 <h1>Not a Member yet? click here to sign up!</h1>
                 <a className={style.toSignupLink} href={`/signup`}>Sign Up!</a>
             </section>            
+
         </div>
     )
 }
