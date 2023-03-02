@@ -142,7 +142,11 @@ button {
     transform: translateY(1px);
 }
 
+
+
 @media (max-width: 768px) {
+
+
     .spotlight_section{
         display: flex;
         flex-direction: column;
@@ -157,5 +161,8 @@ button {
         max-height: auto;
         border: solid white 2px;
         border-radius: 10px;
+    }
+    .disclaimer_header{
+        font-size: 1em;
     }
 }
