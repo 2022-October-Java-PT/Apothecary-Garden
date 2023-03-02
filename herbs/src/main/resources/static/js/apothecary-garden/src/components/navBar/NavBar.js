@@ -40,9 +40,9 @@ let user = getUsername();function Navbar() {
         </li>
         {!user ? 
             <div className={style.navbarNav}>
-            <li className={style.navItem}>
+            {/* <li className={style.navItem}>
             <NavLink to='/signup'>Sign Up</NavLink>
-            </li>
+            </li> */}
             <li className={style.navItem}>
             <NavLink to='/login'>Login</NavLink>
             </li>

@@ -29,6 +29,9 @@ const Login = (props) => {
         <div className={style.loginPage}>
             
             <section className={style.login_section}>
+                <section className={style.loginOne}>
+                    <h1 className={style.loginH1}>Welcome Back {getUsername()} We're Glad You're Here.</h1>
+                </section>
                 <h2 className={style.login_header}>Login To Your Account</h2>
                 <form className={style.loginForm} onSubmit={handleSubmit}>
                     <input className={style.loginText} 
@@ -55,9 +58,16 @@ const Login = (props) => {
                 <button className={style.loginGoogle} type="submit">Login With Google</button> */}
             </section>
 
+
             <section className={style.loginOne}>
                 <h1 className={style.loginH1}>Welcome Back {getUsername()} We're Glad You're Here.</h1>
             </section>
+
+            <section className={style.toSignup}>
+                <h1>Not a Member yet? click here to sign up!</h1>
+                <a className={style.toSignupLink} href={`/signup`}>Sign Up!</a>
+            </section>            
+
         </div>
     )
 }
