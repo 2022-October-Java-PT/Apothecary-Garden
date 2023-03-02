@@ -30,7 +30,7 @@ let user = getUsername();function Navbar() {
             <a href="/searchHerbs">Search Herbs</a>
         </li>
         <li className={style.navItem}>
-            <a href="/storeHerbs">Store Herbs</a>
+            <a href="/storeHerbs">Herbology Corner</a>
         </li>
         <li className={style.navItem}>
             <a href="/MyApothecary">MyApothecary</a>

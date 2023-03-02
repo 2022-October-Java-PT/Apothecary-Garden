@@ -1,150 +1,111 @@
-/* Default styles */
-
-html {
-    scroll-behavior: smooth;
+:root {
+    --primary-color: #5ac7a3;
+    --secondary-color: #f7f4f4;
+    --accent-color: #333333b7;
 }
 
+/* Simplify the design */
 .container {
-    border-radius: 10px;
-    color: rgb(247, 244, 244);
-    text-shadow: 1px 1px 2px black;
-    margin: 50px 185px;
-    border-radius: 25px;
-    padding: 10px;
-    font-family: 'gg sans', sans-serif;
-
-    h1 {
-        font-size: 36px;
-        padding-top: 30px;
-    }
-
-    h4 {
-        font-size: 28px;
-    }
-
-    p {
-        color: #5ac7a3f8;
-        font-size: 22px;
-    }
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 .gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
 }
 
 .box {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    max-width: 1500px;
-    max-height: 900px;
-    border: 5px solid rgba(0, 0, 0, 0.829);
-    border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
-    background: #333333b7;
-    background-size: 100% 200%;
-    transition: all .8s;
+    background-color: var(--accent-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.25em solid rgba(0, 0, 0, 0.829);
+    margin-bottom: .2em;
+}
+
+.box strong {
+    font-size: 2rem;
+}
+
+.box p {
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 .box img {
-    width: 400px;
-    height: 800px;
-    max-width: 1000px;
-    max-height: 600px;
-    background-color: rgb(124, 119, 119);
-    padding: 5px;
+    width: 30%;
+    height: auto;
+    padding: 3px;
+    background-color: white;
+    margin-right: 15px;
     margin-bottom: 15px;
     border-radius: 25px;
 }
 
-.box h4 {
-    font-size: 28px;
-    margin-top: 0;
-    
-}
-
-.box p {
-    font-size: 22px;
-    margin-bottom: 0;
-    color: rgb(247, 244, 244);
+/* Use modern typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     text-shadow: 1px 1px 2px black;
 }
 
-.storingHerbs {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+h1 {
+    font-size: 4rem;
+    margin-top: 1em;
 }
 
-.heading {
-    text-align: center;
+/* Added animations */
+.box {
+    transition: transform 0.3s ease;
 }
 
-.tools {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    img {
-        width: 400px;
-        height: 600px;
-        max-width: 1000px;
-        max-height: 900px;
-        background-color: rgb(124, 119, 119);
-        padding: 5px;
-        border-radius: 25px;
-    }
+.box:hover {
+    transform: scale(1.05);
 }
 
-/* Media queries for mobile devices */
 
+/* Add responsiveness */
 @media (max-width: 768px) {
     .container {
-        margin: 20px;
-        padding: 5px;
+        padding: 1rem;
     }
 
-    h1 {
-        font-size: 28px;
-        padding-top: 20px;
-    }
-
-    h4 {
-        font-size: 24px;
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 1rem;
     }
 
     .box {
         flex-direction: column;
-        max-width: 300px;
-        max-height: 1500px;
-
-        img {
-            width: 100%;
-            height: auto;
-            max-width: none;
-            max-height: none;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.5;
-            padding: 5px;
-        }
+        align-items: flex-start;
+        padding: 1rem 0.5rem;
     }
 
-    .tools img {
+    .box img {
         width: 100%;
-        height: auto;
         max-width: none;
-        max-height: none;
         margin-bottom: 10px;
+    }
+
+    .box strong {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .box p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
     }
 }
