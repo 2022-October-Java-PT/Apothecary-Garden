@@ -33,6 +33,9 @@ let user = getUsername();function Navbar() {
             <a href="/storeHerbs">Store Herbs</a>
         </li>
         <li className={style.navItem}>
+            <a href="/MyApothecary">MyApothecary</a>
+        </li>
+        <li className={style.navItem}>
           <a href="/contact">Contact</a>
         </li>
         {!user ? 
