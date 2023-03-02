@@ -20,7 +20,7 @@ body {
     justify-content: center;
     height: 100%;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-shadow: 1px 1px 2px black;
     margin: 1rem 0;
     padding: 1rem;
@@ -29,6 +29,11 @@ body {
     h1{
         font-size: 2rem;
     }
+}
+.home_body p{
+    // text-align: center;
+    margin-top: 0px;
+    margin-left: 1rem;
 }
 .spotlight_section{
     display: flex;
@@ -57,7 +62,8 @@ div h2 a{
 .herb_image {
     align-self: center;
     max-width: 25%;
-    max-height: auto;
+    height: auto;
+    max-height: 300px;
     border: solid white 2px;
     border-radius: 10px;
 }

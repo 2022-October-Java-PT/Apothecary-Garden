@@ -23,8 +23,8 @@ const ContactPage = () => {
                     </img>
                     <p className={style.position_title}>DEVELOPER</p>
                     <p className={style.personal_description}>Nathan is an Aerospace Engineer currently enrolled in the WCCI coding bootcamp.  he plans to become a full stack developer within the technology industry utilizing his background in aerospace technology development to build a career creating software to further the industry</p>
-                    <a href='https://github.com/WolfgangA1'><img src={github} alt='Github Logo'></img></a>
-                    <a href='https://github.com/WolfgangA1'><img src={linkedIn} alt='LinkedIn Logo'></img></a>
+                    <a href='https://github.com/campbene'><img src={github} alt='Github Logo'></img></a>
+                    <a href='https://www.linkedin.com/in/nathancampbell2020/'><img src={linkedIn} alt='LinkedIn Logo'></img></a>
                 </article>
                 <article className={style.profile_column}>
                     <h2 className={style.profile_name}>DONNA MAGBAG</h2>
