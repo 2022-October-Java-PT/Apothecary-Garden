@@ -40,7 +40,7 @@
 
 .footerWrapper {
    display: flex;
-   min-height: 100vh;
+   // min-height: 100vh;
    flex-direction: column;
    color: aliceblue;
 }
@@ -48,4 +48,11 @@
 .footer {
    margin-top: auto;
    text-align: center;
+   // color: aliceblue;
+   position: relative;
+   text-align: center;
+   // left: 0;
+   bottom: 0;
+   // right: 0;
+   // width: 100%
 }
