@@ -15,7 +15,8 @@ let user = getUsername();function Navbar() {
   const toggleNav = () => setIsOpen(!isOpen);
 
   return (
-    <nav className={style.navbar}>
+    <nav className={`${style.navbar} ${style.sticky}`}>
+
       <div className={style.navbarLogo}>
         <a href="/">Apothecary's Garden</a>
       </div>
