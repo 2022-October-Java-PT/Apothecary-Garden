@@ -15,14 +15,14 @@ const Signup = (props) => {
 
         Axios.post('http://localhost:8080/api/user/new-user', userData).then((response) => {
             setUsernameSession(username);
-            props.history.push('/favorites');
+            props.history.push('/MyApothecary');
         });
 
         Axios.post(`http://localhost:8080/api/${username}/add-user-favorites`, userData).then((response) => {
             
         });
         
-        window.location.href='/favorites';
+        window.location.href='/MyApothecary';
     }
 
     const [username, setUsername] = useState('');
