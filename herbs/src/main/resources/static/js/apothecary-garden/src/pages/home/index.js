@@ -20,6 +20,8 @@ const HomePage = () => {
             </div>
             <button className={style.disclaimer_button} onClick={() => setOpen(true)}>Disclaimer</button>
             <Disclaimer setOpen={setOpen} open={open} />
+            
+
         </div>
     )
 }
