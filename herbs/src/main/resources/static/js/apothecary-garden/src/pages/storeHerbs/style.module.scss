@@ -73,10 +73,6 @@
     transition: transform 0.3s ease;
 }
 
-.box:hover {
-    transform: scale(1.05);
-}
-
 
 /* Add responsiveness */
 @media (max-width: 768px) {
