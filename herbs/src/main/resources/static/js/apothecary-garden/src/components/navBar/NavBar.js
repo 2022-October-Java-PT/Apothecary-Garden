@@ -20,9 +20,9 @@ let user = getUsername();function Navbar() {
         <a href="/">Apothecary's Garden</a>
       </div>
       <ul className={`${style.navbarNav} ${isOpen ? style.active : ""}`}>
-        <li className={style.navItem}>
+        {/* <li className={style.navItem}>
           <a href="/">Home</a>
-        </li>
+        </li> */}
         <li className={style.navItem}>
             <a href="/illness_search">Search Ailment</a>
         </li>
