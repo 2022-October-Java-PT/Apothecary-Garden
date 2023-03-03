@@ -1,37 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:wght@100;300;400;500&family=Rubik+Moonrocks&display=swap');
 
-.footer {
-   padding: 20px;
-   display: flex;
-   justify-content: left;
-   margin: 0 auto;
-   width: 90%;
-   // background-color: #2ce4ad;
-   // border: 5px solid white;
-   border-radius: 25px;
-   color: aliceblue;
+// .footer {
+//    padding: 20px;
+//    display: flex;
+//    justify-content: left;
+//    margin: 0 auto;
+//    width: 90%;
+//    // background-color: #2ce4ad;
+//    // border: 5px solid white;
+//    border-radius: 25px;
+//    color: aliceblue;
 
-   & h3 {
-      font-family: 'roboto', sans-serif;
-      font-size: 1.3rem;
-   }
-}
+//    & h3 {
+//       font-family: 'roboto', sans-serif;
+//       font-size: 1.3rem;
+//    }
+// }
 
-.socialList {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   list-style: none;
+// .socialList {
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    list-style: none;
    
 
-   & a {
-      font-family: 'Concert One', cursive;
-      font-size: 1.2rem;
-      color: black;
-   }
+//    & a {
+//       font-family: 'Concert One', cursive;
+//       font-size: 1.2rem;
+//       color: black;
+//    }
 
-   & a:hover {
-      color: white;
-      transition: .5s;
-   }
+//    & a:hover {
+//       color: white;
+//       transition: .5s;
+//    }
+// }
+
+
+
+.footerWrapper {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   color: aliceblue;
+}
+
+.footer {
+   margin-top: auto;
+   text-align: center;
 }

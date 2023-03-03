@@ -90,6 +90,14 @@
 
    
 
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+
 .navItem a{
     text-decoration: none;
     color: #ffffff;
