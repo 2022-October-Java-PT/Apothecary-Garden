@@ -66,6 +66,11 @@ h2 {
 }
 
 .contact_page {
+    margin-top: 6rem;
+    & h1{
+        font-size: 30px;
+        text-decoration: underline;
+    }
     a {
         img {
             // max-width: 50%;
