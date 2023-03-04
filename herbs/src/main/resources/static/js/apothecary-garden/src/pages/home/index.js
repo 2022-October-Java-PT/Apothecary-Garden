@@ -11,7 +11,7 @@ const HomePage = () => {
         <div className={style.homeContent}>
             <div className={style.home_body}>
                 {/* <h1>Herbal Medicine History</h1> */}
-                <p><em>"Providing information on Herbal Medicines and home use since 2023..."</em>
+                <p className={style.home_blurb}><em>"Providing information on Herbal Medicines and home use since 2023..."</em>
                 </p>
                 <section className={style.spotlight_section}>
                 <h2 className={style.spotlight_header}>Herb Spotlight</h2>
