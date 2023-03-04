@@ -58,9 +58,9 @@ const ContactPage = () => {
                     <img src={profileNuhamin} className={style.profile_img} alt="profile pic Nuhamin">
                     </img>
                     <p className={style.position_title}>DEVELOPER</p>
-                    <p className={style.personal_description}>Nuhamin is a current Student at WCCI pursuing a career in software development.</p>
-                    <a href='https://github.com/WolfgangA1'><img src={github} alt='Github Logo'></img></a>
-                    <a href='https://github.com/WolfgangA1'><img src={linkedIn} alt='LinkedIn Logo'></img></a>
+                    <p className={style.personal_description}>As a student currently enrolled in a WWCIT boot camp, I have come to realize my passion lies in the field of software development. Despite having earned a Bachelor's degree in Computer Science, I am eager to redirect my focus and pursue a career as a software developer.</p>
+                    <a href='https://github.com/Nuhamin-Tesfaye'><img src={github} alt='Github Logo'></img></a>
+                    <a href='https://www.linkedin.com/in/nuhamin-tesfaye'><img src={linkedIn} alt='LinkedIn Logo'></img></a>
                 </article>
             </section>
         </div>
